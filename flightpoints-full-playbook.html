@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlightPoints · Full SEO Playbook 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:14px;scroll-behavior:smooth}
+:root{
+  --bg:#f6f6f3;--white:#fff;--sb:#16191f;--sb-t:#85909f;--sb-h:#1e2330;--acc:#2a57e8;
+  --bdr:#e4e4df;--bdr2:#d0d0ca;--t1:#1a1a1a;--t2:#525252;--tm:#8a8a8a;
+  --red:#b43022;--rl:#fdf1f0;--rm:#eebdb8;
+  --amb:#a05618;--al:#fdf4ea;--am:#edcfa0;
+  --grn:#186040;--gl:#eef8f2;--gm:#a4d4b8;
+  --blu:#1840a8;--bl:#eef3fd;--bm:#adc0f0;
+  --pur:#5418b4;--pl:#f4eefe;--pm:#c4a8f0;
+  --r6:6px;--r10:10px
+}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--t1);display:flex;min-height:100vh;line-height:1.65}
+
+/* ─── SIDEBAR ─── */
+#sb{width:244px;min-width:244px;background:var(--sb);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;display:flex;flex-direction:column;z-index:50}
+.sb-brand{padding:22px 20px 16px;border-bottom:1px solid rgba(255,255,255,.05)}
+.sb-site{font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:3px}
+.sb-report{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.35}
+.sb-score{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.05)}
+.sb-slbl{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sb-t);margin-bottom:7px}
+.sb-snum{display:flex;align-items:baseline;gap:4px}
+.sb-n{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#e04838;line-height:1}
+.sb-d{font-size:12px;color:var(--sb-t)}
+.sb-grade{margin-left:6px;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#e04838;background:rgba(224,72,56,.15);padding:2px 7px;border-radius:3px}
+.sb-bar{height:2px;background:rgba(255,255,255,.07);border-radius:2px;margin-top:9px;overflow:hidden}
+.sb-bfill{height:100%;width:28%;background:#e04838;border-radius:2px}
+.sb-info{padding:8px 20px;font-size:10px;color:rgba(133,144,159,.4);border-bottom:1px solid rgba(255,255,255,.05)}
+nav{flex:1;padding:5px 0}
+.nl{font-size:9px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(133,144,159,.35);padding:13px 20px 4px}
+nav a{display:flex;align-items:center;justify-content:space-between;padding:6px 20px;font-size:11.5px;color:var(--sb-t);text-decoration:none;border-left:2px solid transparent;cursor:pointer;transition:all .1s}
+nav a:hover{background:var(--sb-h);color:#c0c8d4}
+nav a.active{background:var(--sb-h);color:#fff;border-left-color:var(--acc)}
+.ns{font-size:9.5px;font-weight:500;padding:1px 5px;border-radius:3px;flex-shrink:0}
+.nr{background:rgba(180,48,34,.2);color:#e06858}.na{background:rgba(160,86,24,.2);color:#cf8040}.ng{background:rgba(24,96,64,.2);color:#48c080}
+.sb-ft{padding:12px 20px;border-top:1px solid rgba(255,255,255,.05);font-size:9.5px;color:rgba(133,144,159,.35);line-height:1.5}
+
+/* ─── MAIN ─── */
+#main{margin-left:244px;flex:1}
+.pg{display:none;padding:42px 50px;max-width:1060px}
+.pg.active{display:block}
+
+/* PAGE HEADER */
+.ph{margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--bdr)}
+.ph-eye{font-size:9.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--tm);margin-bottom:6px}
+.ph h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--t1);line-height:1.2;margin-bottom:6px}
+.ph p{font-size:12px;color:var(--t2);font-weight:300;max-width:700px}
+
+/* METRIC CARDS */
+.cards{display:grid;gap:10px;margin-bottom:22px}
+.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}.c5{grid-template-columns:repeat(5,1fr)}
+.mc{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);padding:14px 16px}
+.mc-l{font-size:9.5px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.mc-v{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;line-height:1;margin-bottom:4px}
+.mc-s{font-size:10px;color:var(--tm)}
+.mc-br{height:2px;background:var(--bdr);border-radius:1px;margin-top:10px;overflow:hidden}
+.mc-bf{height:100%;border-radius:1px}
+.vr{color:var(--red)}.va{color:var(--amb)}.vg{color:var(--grn)}.vb{color:var(--blu)}.vd{color:var(--t1)}.vp{color:var(--pur)}
+
+/* ALERT BOXES */
+.al{border-radius:var(--r10);padding:13px 17px;margin-bottom:15px;border-left:3px solid}
+.al-t{font-size:12px;font-weight:600;margin-bottom:4px}
+.al p,.al li{font-size:12px;line-height:1.7}
+.al ul,.al ol{padding-left:16px;margin-top:4px}.al li{margin-bottom:3px}.al strong{font-weight:600}
+.al-r{background:var(--rl);border-color:var(--red)}.al-r .al-t{color:var(--red)}.al-r p,.al-r li{color:#5c1e18}
+.al-a{background:var(--al);border-color:var(--amb)}.al-a .al-t{color:var(--amb)}.al-a p,.al-a li{color:#5c3010}
+.al-g{background:var(--gl);border-color:var(--grn)}.al-g .al-t{color:var(--grn)}.al-g p,.al-g li{color:#103c28}
+.al-b{background:var(--bl);border-color:var(--blu)}.al-b .al-t{color:var(--blu)}.al-b p,.al-b li{color:#102868}
+.al-p{background:var(--pl);border-color:var(--pur)}.al-p .al-t{color:var(--pur)}.al-p p,.al-p li{color:#300878}
+
+/* SECTION HEADINGS */
+.sh{margin:24px 0 10px;display:flex;align-items:baseline;gap:10px}
+.sh h3{font-size:13.5px;font-weight:600;color:var(--t1)}.sh p{font-size:11px;color:var(--tm)}
+
+/* SCORE TABLE */
+.stbl{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);overflow:hidden;margin-bottom:18px}
+.sr{display:grid;grid-template-columns:185px 1fr 70px 90px;align-items:center;gap:14px;padding:11px 17px;border-bottom:1px solid var(--bdr)}
+.sr:last-child{border-bottom:none}.sr:hover{background:#fafaf8}
+.sr-n{font-size:12px;color:var(--t1)}.sr-bw{height:4px;background:var(--bdr);border-radius:2px;overflow:hidden}.sr-bf{height:100%;border-radius:2px}.sr-num{font-size:12px;font-weight:600;text-align:right}.sr-tag{text-align:right}
+
+/* TABLES */
+.tw{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);overflow:hidden;margin-bottom:18px}
+table{width:100%;border-collapse:collapse}
+thead tr{border-bottom:1px solid var(--bdr)}
+th{padding:9px 14px;font-size:9.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tm);text-align:left;background:#fafaf8}
+td{padding:10px 14px;font-size:12px;color:var(--t1);border-bottom:1px solid var(--bdr);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#fafaf8}
+.turl{font-family:'Courier New',monospace;font-size:10.5px;color:var(--tm);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pos{font-family:'Playfair Display',serif;font-size:14px;font-weight:700}
+.pp1{color:var(--grn)}.pnr{color:var(--amb)}.pfr{color:var(--red)}
+.td-r{color:var(--red);font-weight:500}.td-a{color:var(--amb);font-weight:500}.td-g{color:var(--grn);font-weight:500}
+
+/* TAGS */
+.tg{display:inline-block;font-size:9.5px;font-weight:500;padding:2px 8px;border-radius:3px;white-space:nowrap;line-height:17px}
+.tg-r{background:var(--rl);color:var(--red);border:1px solid var(--rm)}
+.tg-a{background:var(--al);color:var(--amb);border:1px solid var(--am)}
+.tg-g{background:var(--gl);color:var(--grn);border:1px solid var(--gm)}
+.tg-b{background:var(--bl);color:var(--blu);border:1px solid var(--bm)}
+.tg-p{background:var(--pl);color:var(--pur);border:1px solid var(--pm)}
+.tg-gr{background:#f2f2f0;color:var(--t2);border:1px solid var(--bdr2)}
+
+/* ISSUE LIST */
+.il{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.ii{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);padding:13px 17px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
+.ii.sc{border-left:3px solid var(--red)}.ii.sh2{border-left:3px solid var(--amb)}.ii.sm{border-left:3px solid #7090d0}.ii.sp{border-left:3px solid var(--grn)}.ii.spu{border-left:3px solid var(--pur)}
+.ii-name{font-size:12.5px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.ii-desc{font-size:12px;color:var(--t2);line-height:1.65;font-weight:300}
+.ii-fix{font-size:11px;color:var(--blu);margin-top:5px;font-style:italic}
+
+/* ACTION / TASK LIST */
+.acl{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.aci{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);padding:13px 17px;display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:start}
+.an{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:var(--r6);font-size:11px;font-weight:700;font-family:'Playfair Display',serif;flex-shrink:0}
+.an-r{background:var(--rl);color:var(--red)}.an-a{background:var(--al);color:var(--amb)}.an-b{background:var(--bl);color:var(--blu)}.an-g{background:var(--gl);color:var(--grn)}.an-p{background:var(--pl);color:var(--pur)}
+.ac-n{font-size:12.5px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.ac-d{font-size:12px;color:var(--t2);line-height:1.65;font-weight:300}
+.ac-i{font-size:10.5px;color:var(--grn);font-weight:500;margin-top:5px}
+.ac-t{font-size:10px;color:var(--tm);margin-top:2px}
+
+/* BAR CHART */
+.bc{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);padding:16px 20px;margin-bottom:18px}
+.br{display:flex;align-items:center;gap:10px;margin-bottom:9px}.br:last-child{margin-bottom:0}
+.bl2{width:150px;font-size:11px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0}
+.bl2.hl{color:var(--t1);font-weight:600}
+.bt{flex:1;height:5px;background:var(--bdr);border-radius:3px;overflow:hidden}
+.bf2{height:100%;border-radius:3px}
+.bv{width:160px;text-align:right;font-size:10.5px;color:var(--tm);font-variant-numeric:tabular-nums;flex-shrink:0}
+.bv.hl{color:var(--t1);font-weight:600}
+
+/* COMPETITOR PROFILE CARD */
+.cpc{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);overflow:hidden;margin-bottom:14px}
+.cpc-hd{padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--bdr)}
+.cpc-badge{width:36px;height:36px;border-radius:var(--r6);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;flex-shrink:0}
+.cpc-nm{font-size:13px;font-weight:600;color:var(--t1)}.cpc-url{font-size:10.5px;color:var(--tm);font-family:monospace}
+.cpc-stats{padding:12px 18px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;border-bottom:1px solid var(--bdr);background:#fafaf8}
+.cs{text-align:center}.cs-v{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--t1)}.cs-l{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--tm);margin-top:2px}
+.cpc-body{padding:14px 18px}
+.cpc-kill{background:var(--gl);border:1px solid var(--gm);border-radius:var(--r6);padding:8px 13px;font-size:11.5px;color:var(--grn);font-weight:500;margin-top:8px;display:inline-block}
+
+/* STEP GROUPS */
+.step-grp{margin-bottom:24px}
+.step-hd{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--bdr)}
+.step-wk{font-size:9px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--tm);background:var(--bg);border:1px solid var(--bdr2);padding:2px 8px;border-radius:3px;flex-shrink:0}
+.step-ti{font-size:13.5px;font-weight:600;color:var(--t1)}
+
+.task{display:flex;align-items:flex-start;gap:11px;padding:10px 14px;background:var(--white);border:1px solid var(--bdr);border-radius:var(--r10);margin-bottom:7px}
+.tn{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px}
+.tn-r{background:var(--rl);color:var(--red)}.tn-a{background:var(--al);color:var(--amb)}.tn-b{background:var(--bl);color:var(--blu)}.tn-g{background:var(--gl);color:var(--grn)}.tn-p{background:var(--pl);color:var(--pur)}
+.t-title{font-size:12.5px;font-weight:600;color:var(--t1);margin-bottom:3px}
+.t-desc{font-size:12px;color:var(--t2);line-height:1.65;font-weight:300}
+.t-meta{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap}
+
+.div{height:1px;background:var(--bdr);margin:22px 0}
+.note{font-size:10.5px;color:var(--tm);margin-top:-12px;margin-bottom:16px}
+.hl-row td{background:rgba(180,48,34,.04)!important;font-weight:500}
+.grn-row td{background:rgba(24,96,64,.04)!important;font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- ════════════ SIDEBAR ════════════ -->
+<aside id="sb">
+  <div class="sb-brand">
+    <div class="sb-site">flightpoints.com</div>
+    <div class="sb-report">Full SEO Playbook · 2026<br>Audit · Competitive Intel · Growth Plan</div>
+  </div>
+  <div class="sb-score">
+    <div class="sb-slbl">Overall SEO Score</div>
+    <div class="sb-snum"><span class="sb-n">28</span><span class="sb-d">/100</span><span class="sb-grade">Critical</span></div>
+    <div class="sb-bar"><div class="sb-bfill"></div></div>
+  </div>
+  <div class="sb-info">Semrush live · 8 competitors · April 2026</div>
+  <nav>
+    <div class="nl">Overview</div>
+    <a onclick="show('dash')" id="nav-dash" class="active">Dashboard</a>
+    <a onclick="show('road')" id="nav-road">Priority Roadmap</a>
+
+    <div class="nl">Domain Audit</div>
+    <a onclick="show('domain')" id="nav-domain">Domain Authority <span class="ns nr">6/100</span></a>
+    <a onclick="show('organic')" id="nav-organic">Organic Traffic <span class="ns nr">12/100</span></a>
+    <a onclick="show('keywords')" id="nav-keywords">Keyword Rankings <span class="ns na">22/100</span></a>
+    <a onclick="show('backlinks')" id="nav-backlinks">Backlink Profile <span class="ns nr">8/100</span></a>
+    <a onclick="show('technical')" id="nav-technical">Technical SEO <span class="ns na">40/100</span></a>
+    <a onclick="show('onpage')" id="nav-onpage">On-Page SEO <span class="ns na">38/100</span></a>
+    <a onclick="show('content')" id="nav-content">Content Strategy <span class="ns na">35/100</span></a>
+    <a onclick="show('perf')" id="nav-perf">Performance Audit <span class="ns nr">35/100</span></a>
+
+    <div class="nl">Competitive Intel</div>
+    <a onclick="show('compmatrix')" id="nav-compmatrix">8-Competitor Matrix</a>
+    <a onclick="show('atf')" id="nav-atf">Award Travel Finder ★</a>
+    <a onclick="show('seats')" id="nav-seats">seats.aero</a>
+    <a onclick="show('roame')" id="nav-roame">roame.travel</a>
+    <a onclick="show('pointme')" id="nav-pointme">point.me</a>
+    <a onclick="show('awardtool')" id="nav-awardtool">awardtool.com</a>
+    <a onclick="show('pointhound')" id="nav-pointhound">pointhound</a>
+    <a onclick="show('pyeah')" id="nav-pyeah">pointsyeah</a>
+    <a onclick="show('ppath')" id="nav-ppath">pointspath</a>
+
+    <div class="nl">Growth Playbook</div>
+    <a onclick="show('growth')" id="nav-growth">Growth Opportunities</a>
+    <a onclick="show('content2')" id="nav-content2">Content Playbook</a>
+    <a onclick="show('links')" id="nav-links">Link Building Plan</a>
+    <a onclick="show('tasks')" id="nav-tasks">Granular Task Plan</a>
+  </nav>
+  <div class="sb-ft">Semrush live data · April 2026<br>8 competitors researched</div>
+</aside>
+
+<!-- ════════════ MAIN ════════════ -->
+<main id="main">
+
+<!-- ══ DASHBOARD ══ -->
+<div id="page-dash" class="pg active">
+  <div class="ph">
+    <div class="ph-eye">Full SEO Playbook · April 2026 · Live Semrush Data</div>
+    <h2>flightpoints.com — Complete SEO Audit, Competitive Analysis &amp; Growth Playbook</h2>
+    <p>Everything in one place: domain audit, 8-competitor analysis, technical issues, content gaps, backlink strategy, and a step-by-step growth plan with granular tasks.</p>
+  </div>
+
+  <div class="cards c5">
+    <div class="mc"><div class="mc-l">Authority Score</div><div class="mc-v vr">2</div><div class="mc-s">out of 100</div><div class="mc-br"><div class="mc-bf" style="width:2%;background:var(--red)"></div></div></div>
+    <div class="mc"><div class="mc-l">Organic Traffic</div><div class="mc-v vr">3</div><div class="mc-s">visits/month (US)</div><div class="mc-br"><div class="mc-bf" style="width:1%;background:var(--red)"></div></div></div>
+    <div class="mc"><div class="mc-l">Ranking Keywords</div><div class="mc-v vd">126</div><div class="mc-s">all regions</div><div class="mc-br"><div class="mc-bf" style="width:12%;background:var(--amb)"></div></div></div>
+    <div class="mc"><div class="mc-l">Referring Domains</div><div class="mc-v vr">79</div><div class="mc-s">avg auth: 3/100</div><div class="mc-br"><div class="mc-bf" style="width:4%;background:var(--red)"></div></div></div>
+    <div class="mc"><div class="mc-l">Global Rank</div><div class="mc-v vr">#10.2M</div><div class="mc-s">Semrush worldwide</div></div>
+  </div>
+
+  <div class="al al-r"><div class="al-t">Critical Diagnosis — Read This First</div><p>flightpoints.com generates 3 organic visits/month on a domain authority of 2 — while 8 direct competitors averaging DA 21–46 collectively dominate every keyword this site should rank for. The product is right. The tool exists. The content groundwork is partially in place. <strong>Everything else is missing.</strong> This playbook covers every dimension: what to fix first, what content to build, how competitors are winning, and the exact tasks to execute week by week.</p></div>
+
+  <div class="sh"><h3>Score by Category</h3><p>All 7 audit dimensions · scored 0–100 from live data</p></div>
+  <div class="stbl">
+    <div class="sr"><div class="sr-n">Domain Authority</div><div class="sr-bw"><div class="sr-bf" style="width:6%;background:var(--red)"></div></div><div class="sr-num vr">6/100</div><div class="sr-tag"><span class="tg tg-r">Critical</span></div></div>
+    <div class="sr"><div class="sr-n">Organic Traffic</div><div class="sr-bw"><div class="sr-bf" style="width:12%;background:var(--red)"></div></div><div class="sr-num vr">12/100</div><div class="sr-tag"><span class="tg tg-r">Critical</span></div></div>
+    <div class="sr"><div class="sr-n">Backlink Profile</div><div class="sr-bw"><div class="sr-bf" style="width:8%;background:var(--red)"></div></div><div class="sr-num vr">8/100</div><div class="sr-tag"><span class="tg tg-r">Critical</span></div></div>
+    <div class="sr"><div class="sr-n">Keyword Strategy</div><div class="sr-bw"><div class="sr-bf" style="width:22%;background:var(--amb)"></div></div><div class="sr-num va">22/100</div><div class="sr-tag"><span class="tg tg-a">Poor</span></div></div>
+    <div class="sr"><div class="sr-n">Content Strategy</div><div class="sr-bw"><div class="sr-bf" style="width:35%;background:var(--amb)"></div></div><div class="sr-num va">35/100</div><div class="sr-tag"><span class="tg tg-a">Poor</span></div></div>
+    <div class="sr"><div class="sr-n">On-Page SEO</div><div class="sr-bw"><div class="sr-bf" style="width:38%;background:var(--amb)"></div></div><div class="sr-num va">38/100</div><div class="sr-tag"><span class="tg tg-a">Poor</span></div></div>
+    <div class="sr"><div class="sr-n">Technical SEO</div><div class="sr-bw"><div class="sr-bf" style="width:40%;background:var(--amb)"></div></div><div class="sr-num va">40/100</div><div class="sr-tag"><span class="tg tg-a">Poor</span></div></div>
+  </div>
+
+  <div class="sh"><h3>Top 5 Critical Issues</h3></div>
+  <div class="il">
+    <div class="ii sc"><div><div class="ii-name">Domain Authority 2/100 — Google has near-zero trust in this domain</div><div class="ii-desc">Every competitor scores 21–46. At DA 2, the site cannot rank for any competitive keyword regardless of content quality. Authority is the rate-limiting factor for everything else. 160 current backlinks are almost entirely spam directories that may actively harm rankings.</div><div class="ii-fix">→ Disavow all spam links this week. Begin earning editorial links from travel and finance publications immediately.</div></div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sc"><div><div class="ii-name">3 organic visits/month despite 126 indexed keywords — all ranking too deep to get clicks</div><div class="ii-desc">126 keywords are indexed but almost all sit below position 30, which receives ~0.1% of clicks. The indexing foundation exists. The content is being crawled. It simply needs to be pushed to page one for keywords with real search volume.</div><div class="ii-fix">→ Target the 8 keywords currently at positions 17–45 with the highest volume. Push them to page one first.</div></div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sc"><div><div class="ii-name">Backlink profile is 95%+ spam — active penalty risk</div><div class="ii-desc">Domains takes.sbs, wants.cfd, blinks.sbs, knows.monster all share IP 147.135.215.43 (France) — a clear Private Blog Network. These create active spam penalty risk with Google. Zero links from recognisable publications.</div><div class="ii-fix">→ Submit disavow file to Google Search Console within 48 hours. See Backlink Profile section for full list.</div></div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sc"><div><div class="ii-name">Not ranking for any core product keywords — competitors hold positions 1–5 for all of them</div><div class="ii-desc">"Award flight search tool" (1,900/mo) — seats.aero #1. "Award flight search" (1,900/mo) — seats.aero #1, pointsyeah #2, awardtool #3. "Points flights" (390/mo) — roame #1. FlightPoints does not appear in the top 100 for any of these.</div><div class="ii-fix">→ Build dedicated landing pages for each core product keyword. The homepage cannot rank for all simultaneously.</div></div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sh2"><div><div class="ii-name">Zero schema markup — invisible to AI Overviews and rich results</div><div class="ii-desc">No structured data is implemented on any page. In 2026, schema is required for AI Overview inclusion — the fastest-growing traffic channel. Competitors with schema appear in AI-generated travel answers while FlightPoints is completely absent. This is a 3-day fix with outsized long-term impact.</div><div class="ii-fix">→ Implement WebApplication, Article + FAQPage, BreadcrumbList, and Organization schema across all page types.</div></div><span class="tg tg-a">High</span></div>
+  </div>
+</div>
+
+<!-- ══ PRIORITY ROADMAP ══ -->
+<div id="page-road" class="pg">
+  <div class="ph"><div class="ph-eye">Prioritised Action Plan</div><h2>Priority Roadmap — Ordered by Impact &amp; Urgency</h2><p>14 specific actions. Technical fixes take days. Link building takes months. Both run simultaneously from day one. Do not skip ahead.</p></div>
+
+  <div class="al al-b"><div class="al-t">How to use this roadmap</div><p>Items 1–5 are prerequisites. Do these before anything else — they remove active blockers and make every subsequent action more effective. Items 6–10 are the core Month 1 growth engine. Items 11–14 are the large-scale plays that compound over 3–18 months. Start planning items 11–14 in month one even if execution begins later.</p></div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Days 1–5</div><div class="step-ti">Remove all blockers — these are prerequisites for everything else</div></div>
+    <div class="acl">
+      <div class="aci"><div class="an an-r">1</div><div><div class="ac-n">Submit disavow file to Google Search Console</div><div class="ac-d">takes.sbs, wants.cfd, blinks.sbs, knows.sbs, knows.monster (all on IP 147.135.215.43, France) = Private Blog Network. Also disavow all .shop, .store, .sbs, .cfd, .monster domains in the backlink profile. Export from GSC → create disavow.txt → upload. Removes active spam penalty risk that suppresses all current rankings.</div><div class="ac-i">Impact: Removes penalty risk · Effort: Low · Time: 2 hrs</div></div><span class="tg tg-r">Day 1</span></div>
+      <div class="aci"><div class="an an-r">2</div><div><div class="ac-n">Fix www vs non-www canonicalisation — stop splitting link equity</div><div class="ac-d">Both www.flightpoints.com and flightpoints.com are indexed simultaneously. Every backlink to either version splits authority. Choose www, implement 301 redirect for non-www, set preferred domain in GSC, update all internal links. Also confirm all /fi/, /he/, /es/, /tl/ locale pages are not treated as duplicate content without hreflang.</div><div class="ac-i">Impact: Consolidates all link equity · Effort: Low · Time: 2 hrs dev</div></div><span class="tg tg-r">Day 1</span></div>
+      <div class="aci"><div class="an an-r">3</div><div><div class="ac-n">Rewrite every meta title and description — immediate CTR uplift</div><div class="ac-d">Homepage title: "Award Flight Search Tool — Find Flights with Miles &amp; Points | FlightPoints" (62 chars). Each /explore/[airline] page: "[Airline] Award Flights — Search with Miles &amp; Points | FlightPoints". Each blog post: "[Target Keyword]: [Benefit] Guide 2026 | FlightPoints". Meta descriptions: 150–160 chars, keyword + benefit + CTA. Even a 1% CTR improvement on current impressions meaningfully doubles traffic.</div><div class="ac-i">Impact: Immediate CTR improvement · Effort: Low · Time: 1 day</div></div><span class="tg tg-r">Days 1–2</span></div>
+      <div class="aci"><div class="an an-r">4</div><div><div class="ac-n">Implement JSON-LD schema markup across all page types</div><div class="ac-d">Required: (1) WebApplication + SoftwareApplication on /explore search tool. (2) Article + FAQPage schema on every blog post. (3) BreadcrumbList on every page. (4) Organization schema on homepage. This enables rich results in Google SERPs and is essential for AI Overview inclusion — the fastest-growing traffic source in 2026. Validate with Google's Rich Results Test after implementation.</div><div class="ac-i">Impact: Rich results + AI Overviews + structured indexing · Effort: Medium · Time: 3–4 days dev</div></div><span class="tg tg-r">Days 1–4</span></div>
+      <div class="aci"><div class="an an-r">5</div><div><div class="ac-n">Add 200 words of server-rendered content to every /explore/[airline] page</div><div class="ac-d">Every /explore/[airline] page likely renders entirely in JavaScript — invisible to Google's text indexing. Add introductory content above the search tool: (1) programme name and parent airline, (2) typical point costs by cabin class (economy/business/first), (3) main credit card transfer partners for this programme, (4) best redemptions, (5) 3-question FAQ with FAQPage schema. 25+ pages immediately become indexable for airline + award keywords. This can be done in 2–3 days using one template.</div><div class="ac-i">Impact: 25+ pages visible to Google overnight · Effort: Low-Medium · Time: 2–3 days</div></div><span class="tg tg-r">Days 3–5</span></div>
+    </div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Week 1–2</div><div class="step-ti">Highest ROI content — builds the fastest traffic</div></div>
+    <div class="acl">
+      <div class="aci"><div class="an an-a">6</div><div><div class="ac-n">Build the transfer bonus tracker at /transfer-bonuses — the #1 ROI content in this space</div><div class="ac-d">roame's /guides/points-transfer-bonuses ranks for 1,649 keywords and drives 1,490 visits/month. awardtravelfinder ranks for the same cluster. Build one page covering all active transfer bonuses: Amex MR, Chase UR, Citi TYP, Capital One Miles, Bilt Rewards, Marriott Bonvoy. Structure: live table of all current bonuses (programme → airline → bonus % → expiry), historical bonus tracker per programme, email opt-in for new bonus alerts. Targets: "amex transfer bonus" (5,400/mo, $10 CPC), "chase transfer bonus" (5,400/mo, $1.96 CPC), "capital one transfer bonus" (1,900/mo), "credit card transfer bonuses" (2,400/mo, $7 CPC).</div><div class="ac-i">Expected: 1,000–3,000 visits/month within 6 months · High link acquisition · Recurring visits · Effort: Medium</div></div><span class="tg tg-a">Week 1</span></div>
+      <div class="aci"><div class="an an-a">7</div><div><div class="ac-n">Build 13 points value pages — one per major loyalty programme</div><div class="ac-d">URLs: /amex-points-value, /chase-points-value, /capital-one-miles-value, /citi-points-value, /bilt-points-value, /united-miles-value, /delta-miles-value, /aa-miles-value, /marriott-points-value, /hilton-points-value, /hyatt-points-value, /ihg-points-value, /southwest-points-value. Each page: current value in cents per point (best case / average / worst case), best redemptions for this programme, worst redemptions to avoid, which credit cards transfer here and at what ratio, interactive points value calculator widget for this programme, FAQ (5+ questions with FAQPage schema). awardtravelfinder's /marriott-point-values ranks for 343 keywords and drives 560 visits/month from one page. 13 pages × avg 200 visits = 2,600+ new monthly visits.</div><div class="ac-i">Expected: 2,500–5,000 visits/month · Effort: Medium per page · Time: 2 weeks total</div></div><span class="tg tg-a">Weeks 1–2</span></div>
+      <div class="aci"><div class="an an-a">8</div><div><div class="ac-n">Rewrite /blogs/award-search-tool/ as the definitive tool comparison</div><div class="ac-d">Currently ranks #78–97 for "award tool" and "award travel search" — the most commercially important underperforming page. Rewrite as: "8 Best Award Flight Search Tools in 2026 — Compared and Ranked." Structure: (1) intro explaining why tool choice matters, (2) comparison table (all 8 tools × 6 criteria), (3) individual tool sections (300 words each), (4) "best for beginners / advanced / business class hunters" verdicts, (5) FlightPoints featured prominently. 3,000+ words, FAQPage schema, 3–5 targeted backlinks to this URL specifically. Target: positions 5–15 within 60 days.</div><div class="ac-i">Expected: Most commercially important page · Highest conversion rate · Effort: High (1 page) · Time: 3 days</div></div><span class="tg tg-a">Week 2</span></div>
+    </div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Month 1</div><div class="step-ti">Core product pages + content architecture + link building begins</div></div>
+    <div class="acl">
+      <div class="aci"><div class="an an-a">9</div><div><div class="ac-n">Build 3 dedicated landing pages for core product keywords</div><div class="ac-d">(1) /award-flight-search — targeting "award flight search tool" (1,900/mo) and "award flight search" (1,900/mo). (2) /search-flights-with-points — targeting "search flights with points" (140/mo), "flights with points search" (70/mo). (3) /award-travel-search — targeting "award travel search" (480/mo). Each page: 1,000+ words, features comparison vs competitors, screenshot of the tool, how-to section, WebApplication schema, 3–5 targeted backlinks. The homepage competing for all three simultaneously prevents any from ranking well — dedicated URLs are required.</div><div class="ac-i">Expected: Core product keyword rankings · Effort: High · Time: 1–2 weeks</div></div><span class="tg tg-a">Month 1</span></div>
+      <div class="aci"><div class="an an-a">10</div><div><div class="ac-n">Begin editorial link building — target 5 quality links (DA 30+) in 30 days</div><div class="ac-d">Priority targets: (1) ThriftTraveler.com — guest post or tool inclusion in "award search tools" article. (2) FrequentMiler.com — tool review or guest post. (3) NerdWallet Travel — pitch inclusion in award search tools guide. (4) MileValue.com — guest post featuring FlightPoints. (5) ThePointsGuy.com — pitch tool mention in relevant roundup. Pitch approach: 3-sentence email with a specific offer (research, data, or a complete article draft). Track in a spreadsheet. 5 quality editorial links in 30 days is the minimum to begin moving authority.</div><div class="ac-i">Expected: Foundation of all authority growth · Effort: Very High · Time: Ongoing</div></div><span class="tg tg-a">Month 1</span></div>
+      <div class="aci"><div class="an an-a">11</div><div><div class="ac-n">Build 25 transfer partner guide pages + 20 credit card transfer guide pages</div><div class="ac-d">Transfer partner pages (/transfer-partners/[airline]): Alaska Mileage Plan, American AAdvantage, United MileagePlus, Delta SkyMiles, British Airways Avios, Air Canada Aeroplan, Singapore KrisFlyer, Air France Flying Blue, Emirates Skywards, Etihad Guest, Turkish Miles&amp;Smiles, ANA, JAL, Qatar Avios, Cathay Pacific Asia Miles, Iberia Avios, Virgin Atlantic, Hyatt, Marriott, Hilton. Credit card transfer pages (/credit-card-transfers/[card]): Amex MR, Chase UR, Citi TYP, Capital One, Bilt, Wells Fargo Autograph, US Bank Altitude Reserve, Bank of America. awardtravelfinder's Alaska page drives 383 visits/month. Each page: which cards transfer here, ratios, transfer time, bonus history, CTA to FlightPoints search.</div><div class="ac-i">Expected: 4,000–10,000 visits/month at full build · Effort: High total, low per page · Time: 3–4 weeks</div></div><span class="tg tg-a">Month 1</span></div>
+      <div class="aci"><div class="an an-a">12</div><div><div class="ac-n">Fix hreflang for all locale pages — and actively build Finnish content</div><div class="ac-d">Implement complete hreflang matrix for Finnish (/fi/), Hebrew (/he/), Spanish (/es/, /es-mx/), and Tagalog (/tl/). The Finnish page /fi/explore/emirates/ already ranks #27 for "flyselskab emirates" (27,100 monthly searches) with almost zero content investment — the site's highest-volume keyword. Build 5 Finnish-language content pages targeting Finnish award travel searchers. Finnish award travel has near-zero local competition. Target: 3,000–5,000 Finnish monthly visits within 6 months. Also add all locale variants to the XML sitemap.</div><div class="ac-i">Expected: Removes duplicate content risk + unlocks major untapped market · Effort: Medium · Time: 1 week</div></div><span class="tg tg-a">Month 1</span></div>
+    </div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Month 2–3</div><div class="step-ti">Large-scale plays — the 10,000+ visit/month builders</div></div>
+    <div class="acl">
+      <div class="aci"><div class="an an-b">13</div><div><div class="ac-n">Build 300+ route pages — the single largest traffic opportunity in this entire space</div><div class="ac-d">URL pattern: /routes/[city-to-city]. One template. Data from the product database. Each page: route intro (airlines serving it, loyalty programmes), points comparison table (10+ programmes × economy/business/first), best value callout per cabin, booking tips for this route, FAQ (5 questions with FAQPage schema), live search CTA into FlightPoints. FlightPoints has a natural advantage: real-time award availability data, not just static estimates. Priority routes: JFK-LHR, JFK-NRT, LAX-SYD, LAX-NRT, SFO-SIN, ORD-LHR, MIA-GRU, JFK-DXB, JFK-CDG, LAX-HKG. Build 300 routes in 60 days using the template. awardtravelfinder already has JFK-NRT, LAX-SYD, Paris-SFO ranking — but only at DA 21. With higher authority, FlightPoints can outrank them.</div><div class="ac-i">Expected: 300 pages × 50 visits = 15,000/month · Scales to 50,000+ · Effort: High (1× build) · Time: 60 days</div></div><span class="tg tg-b">Month 2</span></div>
+      <div class="aci"><div class="an an-b">14</div><div><div class="ac-n">Build a Chrome extension overlaying miles prices in Google Flights</div><div class="ac-d">A Chrome extension that intercepts Google Flights search results and shows: (1) whether award seats are available for each flight result, (2) the points cost across 3–5 loyalty programmes, (3) a "Search in FlightPoints" button. pointspath.com built this exact product and achieved DA 31 with 579 referring domains from the extension + press alone. ThriftTraveler.com calls pointspath "the easiest tool for beginners" — it gets mentioned in every tools roundup. A FlightPoints extension would appear in every "award tools" article and create a passive distribution channel that no SEO strategy can replicate.</div><div class="ac-i">Expected: 10,000+ installs · Durable distribution moat · Effort: High (dev) · Time: 6–8 weeks</div></div><span class="tg tg-b">Month 2–3</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ DOMAIN AUTHORITY ══ -->
+<div id="page-domain" class="pg">
+  <div class="ph"><div class="ph-eye">Section 1 · Score: 6/100</div><h2>Domain Authority</h2><p>Authority score, trust score, global rank, and the comparison against all 8 direct competitors.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Authority Score</div><div class="mc-v vr">2</div><div class="mc-s">Semrush 0–100</div><div class="mc-br"><div class="mc-bf" style="width:2%;background:var(--red)"></div></div></div>
+    <div class="mc"><div class="mc-l">Trust Score</div><div class="mc-v vr">2</div><div class="mc-s">Semrush 0–100</div><div class="mc-br"><div class="mc-bf" style="width:2%;background:var(--red)"></div></div></div>
+    <div class="mc"><div class="mc-l">Global Rank</div><div class="mc-v vr">#10.2M</div><div class="mc-s">Semrush worldwide</div></div>
+    <div class="mc"><div class="mc-l">Total Backlinks</div><div class="mc-v vd">160</div><div class="mc-s">mostly spam directories</div></div>
+  </div>
+  <div class="al al-r"><div class="al-t">What Authority Score 2 means in practice</div><p>A brand-new domain scores 1. Sites ranking in the top 5 for competitive keywords need 40–70+. At score 2, the site can only rank for near-zero competition keywords — which drive near-zero traffic. One editorial link from ThePointsGuy.com (DA 80+) is worth more than all 160 current backlinks combined. Authority is the rate-limiting factor for every other SEO effort.</p></div>
+  <div class="sh"><h3>Authority vs. All 8 Competitors</h3><p>Live Semrush data · April 2026</p></div>
+  <div class="bc">
+    <div class="br"><div class="bl2">point.me</div><div class="bt"><div class="bf2" style="width:46%;background:var(--red)"></div></div><div class="bv">DA 46 · 2,938 domains · 22,038 links</div></div>
+    <div class="br"><div class="bl2">seats.aero</div><div class="bt"><div class="bf2" style="width:43%;background:var(--red)"></div></div><div class="bv">DA 43 · 3,155 domains · 31,363 links</div></div>
+    <div class="br"><div class="bl2">roame.travel</div><div class="bt"><div class="bf2" style="width:34%;background:var(--amb)"></div></div><div class="bv">DA 34 · 2,270 domains · 11,272 links</div></div>
+    <div class="br"><div class="bl2">pointsyeah.com</div><div class="bt"><div class="bf2" style="width:34%;background:var(--amb)"></div></div><div class="bv">DA 34 · 759 domains · 2,982 links</div></div>
+    <div class="br"><div class="bl2">pointspath.com</div><div class="bt"><div class="bf2" style="width:31%;background:var(--blu)"></div></div><div class="bv">DA 31 · 579 domains · 2,734 links</div></div>
+    <div class="br"><div class="bl2">pointhound.com</div><div class="bt"><div class="bf2" style="width:28%;background:var(--blu)"></div></div><div class="bv">DA 28 · 321 domains · 7,326 links</div></div>
+    <div class="br"><div class="bl2">awardtool.com</div><div class="bt"><div class="bf2" style="width:23%;background:var(--pur)"></div></div><div class="bv">DA 23 · 250 domains · 1,630 links</div></div>
+    <div class="br"><div class="bl2">awardtravelfinder</div><div class="bt"><div class="bf2" style="width:21%;background:var(--pur)"></div></div><div class="bv">DA 21 · 302 domains · 72,718 links</div></div>
+    <div class="br"><div class="bl2 hl">flightpoints.com</div><div class="bt"><div class="bf2" style="width:2%;background:var(--red)"></div></div><div class="bv hl" style="color:var(--red)">DA 2 · 79 domains · 160 links</div></div>
+  </div>
+  <div class="al al-a"><div class="al-t">Realistic authority growth timeline</div><ul><li><strong>Months 1–3:</strong> Disavow spam, earn 10–15 editorial links → target DA 8–12</li><li><strong>Months 4–6:</strong> 30–50 quality links, first press mentions → target DA 15–25</li><li><strong>Months 7–12:</strong> 80–100 quality links, brand recognition → target DA 30–40</li></ul></div>
+</div>
+
+<!-- ══ ORGANIC TRAFFIC ══ -->
+<div id="page-organic" class="pg">
+  <div class="ph"><div class="ph-eye">Section 2 · Score: 12/100</div><h2>Organic Traffic &amp; Visibility</h2><p>Where the site appears in search, how much traffic it captures, and the gap to every competitor.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Monthly US Traffic</div><div class="mc-v vr">3</div><div class="mc-s">visits per month</div></div>
+    <div class="mc"><div class="mc-l">Traffic Value</div><div class="mc-v vr">$0</div><div class="mc-s">equivalent PPC cost</div></div>
+    <div class="mc"><div class="mc-l">Indexed URLs</div><div class="mc-v vd">149</div><div class="mc-s">pages in Google's index</div></div>
+    <div class="mc"><div class="mc-l">Paid Campaigns</div><div class="mc-v vd">None</div><div class="mc-s">$0 ad spend</div></div>
+  </div>
+  <div class="sh"><h3>Monthly Traffic vs. All 8 Competitors</h3></div>
+  <div class="bc">
+    <div class="br"><div class="bl2">point.me</div><div class="bt"><div class="bf2" style="width:100%;background:var(--red)"></div></div><div class="bv">~77,000/mo · $262K value</div></div>
+    <div class="br"><div class="bl2">seats.aero</div><div class="bt"><div class="bf2" style="width:79%;background:var(--red)"></div></div><div class="bv">~61,000/mo · $108K value</div></div>
+    <div class="br"><div class="bl2">pointsyeah.com</div><div class="bt"><div class="bf2" style="width:63%;background:var(--amb)"></div></div><div class="bv">~49,000/mo · ~$20K value</div></div>
+    <div class="br"><div class="bl2">roame.travel</div><div class="bt"><div class="bf2" style="width:47%;background:var(--amb)"></div></div><div class="bv">36,342/mo · $146K value</div></div>
+    <div class="br"><div class="bl2">pointhound.com</div><div class="bt"><div class="bf2" style="width:24%;background:var(--blu)"></div></div><div class="bv">18,742/mo · $52K value</div></div>
+    <div class="br"><div class="bl2">awardtool.com</div><div class="bt"><div class="bf2" style="width:8%;background:var(--pur)"></div></div><div class="bv">~6,100/mo · ~$8K value</div></div>
+    <div class="br"><div class="bl2">pointspath.com</div><div class="bt"><div class="bf2" style="width:7%;background:var(--pur)"></div></div><div class="bv">~5,700/mo · ~$15K value</div></div>
+    <div class="br"><div class="bl2">awardtravelfinder</div><div class="bt"><div class="bf2" style="width:6%;background:var(--pur)"></div></div><div class="bv">~4,770/mo · ~$30K value</div></div>
+    <div class="br"><div class="bl2 hl">flightpoints.com</div><div class="bt"><div class="bf2" style="width:0.2%;background:var(--red)"></div></div><div class="bv hl" style="color:var(--red)">3/mo · $0</div></div>
+  </div>
+  <div class="sh"><h3>Top Traffic-Driving URLs</h3></div>
+  <div class="tw"><table><thead><tr><th>URL</th><th>Keywords</th><th>Traffic Share</th><th>Status</th></tr></thead><tbody>
+    <tr><td class="turl">/fi/explore/emirates/departure/AS</td><td>1</td><td><strong class="td-g">100%</strong></td><td><span class="tg tg-g">Only earner</span></td></tr>
+    <tr><td class="turl">/ (homepage)</td><td>21</td><td>0%</td><td><span class="tg tg-r">Wasted potential</span></td></tr>
+    <tr><td class="turl">/blogs/step-by-step-guide-to-booking-award-flights/</td><td>9</td><td>0%</td><td><span class="tg tg-a">Near miss</span></td></tr>
+    <tr><td class="turl">/blogs/airline-alliances-explained/</td><td>14</td><td>0%</td><td><span class="tg tg-a">Near miss</span></td></tr>
+    <tr><td class="turl">/blogs/award-search-tool-how-to-find-award-flights/</td><td>4</td><td>0%</td><td><span class="tg tg-a">Near miss</span></td></tr>
+    <tr><td class="turl">/explore/united-mileageplus</td><td>2</td><td>0%</td><td><span class="tg tg-b">Opportunity</span></td></tr>
+  </tbody></table></div>
+  <div class="al al-g"><div class="al-t">Realistic traffic potential within 12 months</div><p>If FlightPoints reached positions 1–3 for just five primary keywords — "award flight search tool" (1,900/mo), "award travel search" (480/mo), "points flights" (390/mo), "book flight with miles" (140/mo), "flights with points search" (140/mo) — it could capture 500–2,000 monthly visitors. That is 200–700× current traffic, achievable within 6–12 months. With the route pages and content programme, the 18-month target is 20,000–40,000 monthly visits.</p></div>
+</div>
+
+<!-- ══ KEYWORD RANKINGS ══ -->
+<div id="page-keywords" class="pg">
+  <div class="ph"><div class="ph-eye">Section 3 · Score: 22/100</div><h2>Keyword Rankings</h2><p>Every keyword the site currently ranks for, SERP ownership across all 8 competitors, and the highest-value untapped keywords.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Page 1 (1–10)</div><div class="mc-v vg">2</div><div class="mc-s">keywords on page one</div></div>
+    <div class="mc"><div class="mc-l">Near P1 (11–30)</div><div class="mc-v va">8</div><div class="mc-s">within reach of page 1</div></div>
+    <div class="mc"><div class="mc-l">Deep (31–100)</div><div class="mc-v vr">116</div><div class="mc-s">effectively invisible</div></div>
+    <div class="mc"><div class="mc-l">Best Position</div><div class="mc-v vg">#9</div><div class="mc-s">"flight availability meaning"</div></div>
+  </div>
+  <div class="sh"><h3>Current Rankings — Full List</h3><p>US database · live April 2026 data · sorted by position</p></div>
+  <div class="tw"><table><thead><tr><th>Keyword</th><th>Position</th><th>Volume</th><th>Gap to P1</th><th>Ranking URL</th></tr></thead><tbody>
+    <tr><td>flight availability meaning</td><td><span class="pos pp1">#9</span></td><td>40</td><td><span class="tg tg-g">Page 1 ✓</span></td><td class="turl">/blogs/how-airline-award-availability-really-works/</td></tr>
+    <tr><td>flight availability meaning</td><td><span class="pos pp1">#14</span></td><td>40</td><td><span class="tg tg-a">4 spots</span></td><td class="turl">/blogs/how-airline-award-availability-really-works/</td></tr>
+    <tr><td>flight points</td><td><span class="pos pnr">#17</span></td><td>480</td><td><span class="tg tg-a">7 spots</span></td><td class="turl">/ (homepage)</td></tr>
+    <tr><td>flyselskab emirates (Finnish)</td><td><span class="pos pnr">#27</span></td><td>27,100</td><td><span class="tg tg-a">17 spots</span></td><td class="turl">/fi/explore/emirates/departure/AS</td></tr>
+    <tr><td>is lufthansa part of oneworld</td><td><span class="pos pfr">#32</span></td><td>90</td><td><span class="tg tg-r">22 spots</span></td><td class="turl">/blogs/airline-alliances-explained/</td></tr>
+    <tr><td>how to get flight points</td><td><span class="pos pfr">#32</span></td><td>140</td><td><span class="tg tg-r">22 spots</span></td><td class="turl">/blogs/step-by-step-guide/</td></tr>
+    <tr><td>book with points</td><td><span class="pos pfr">#39</span></td><td>170</td><td><span class="tg tg-r">29 spots</span></td><td class="turl">/blogs/step-by-step-guide/</td></tr>
+    <tr><td>points flights</td><td><span class="pos pfr">#45</span></td><td>390</td><td><span class="tg tg-r">35 spots</span></td><td class="turl">/ (homepage)</td></tr>
+    <tr><td>flights with points search</td><td><span class="pos pfr">#45</span></td><td>70</td><td><span class="tg tg-r">35 spots</span></td><td class="turl">/ (homepage)</td></tr>
+    <tr><td>how to get points for flights</td><td><span class="pos pfr">#45</span></td><td>170</td><td><span class="tg tg-r">35 spots</span></td><td class="turl">/blogs/top-10-ways-to-earn-miles/</td></tr>
+    <tr><td>fly with points</td><td><span class="pos pfr">#58</span></td><td>110</td><td><span class="tg tg-r">48 spots</span></td><td class="turl">/blogs/step-by-step-guide/</td></tr>
+    <tr><td>award tool</td><td><span class="pos pfr">#78</span></td><td>1,900</td><td><span class="tg tg-r">68 spots</span></td><td class="turl">/blogs/award-search-tool/</td></tr>
+    <tr><td>award travel search</td><td><span class="pos pfr">#97</span></td><td>480</td><td><span class="tg tg-r">87 spots</span></td><td class="turl">/blogs/award-search-tool/</td></tr>
+    <tr><td>best award flight search engine</td><td><span class="pos pfr">#97</span></td><td>50</td><td><span class="tg tg-r">87 spots</span></td><td class="turl">/blogs/award-search-tool/</td></tr>
+  </tbody></table></div>
+  <div class="sh"><h3>SERP Ownership — Who Owns Each Core Keyword</h3></div>
+  <div class="tw"><table><thead><tr><th>Keyword</th><th>Vol.</th><th>CPC</th><th>Position 1</th><th>Position 2</th><th>Position 3</th><th>FlightPoints</th></tr></thead><tbody>
+    <tr><td>award flight search</td><td>1,900</td><td>$0.75</td><td>seats.aero</td><td>pointsyeah</td><td>awardtool</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>award flight search tool</td><td>1,900</td><td>$0.73</td><td>seats.aero</td><td>awardtool</td><td>pointsyeah</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>award travel search</td><td>480</td><td>$0.74</td><td>seats.aero</td><td>pointsyeah</td><td>awardtool</td><td><span class="tg tg-r">#97</span></td></tr>
+    <tr><td>points flights</td><td>390</td><td>$2.30</td><td>roame</td><td>pointsyeah</td><td>pointspath</td><td><span class="tg tg-r">#45</span></td></tr>
+    <tr><td>amex transfer bonus</td><td>5,400</td><td>$10.02</td><td>roame #7</td><td>awardtravelfinder</td><td>point.me</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>chase transfer bonus</td><td>5,400</td><td>$1.96</td><td>roame #7</td><td>point.me</td><td>awardtravelfinder</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>marriott bonvoy points value</td><td>4,400</td><td>$2.31</td><td>nerdwallet</td><td>–</td><td>awardtravelfinder</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>alaska transfer partners</td><td>1,600</td><td>$1.12</td><td>–</td><td>–</td><td>awardtravelfinder #4</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>amex platinum vs CSR</td><td>8,100</td><td>$18.40</td><td>–</td><td>–</td><td>awardtravelfinder #8</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+    <tr><td>citi transfer partners</td><td>4,400</td><td>$279.86</td><td>–</td><td>–</td><td>roame #4</td><td><span class="tg tg-r">Not ranking</span></td></tr>
+  </tbody></table></div>
+  <div class="sh"><h3>Highest-Value Untapped Keywords</h3><p>Not ranking for any of these — all are actively ranking for competitors</p></div>
+  <div class="tw"><table><thead><tr><th>Keyword</th><th>Volume</th><th>CPC</th><th>Competitor Ranking</th><th>Content to Build</th></tr></thead><tbody>
+    <tr><td>award flight search tool</td><td>1,900</td><td>$0.73</td><td>seats.aero #1, awardtool #2</td><td><span class="tg tg-r">Landing page</span></td></tr>
+    <tr><td>amex transfer bonus</td><td>5,400</td><td>$10.02</td><td>awardtravelfinder #7</td><td><span class="tg tg-a">Transfer bonus tracker</span></td></tr>
+    <tr><td>chase transfer bonus</td><td>5,400</td><td>$1.96</td><td>roame #7, awardtravelfinder #14</td><td><span class="tg tg-a">Transfer bonus tracker</span></td></tr>
+    <tr><td>citi transfer partners</td><td>4,400</td><td>$279.86</td><td>roame #4</td><td><span class="tg tg-b">Transfer partner guide</span></td></tr>
+    <tr><td>marriott bonvoy points value</td><td>4,400</td><td>$2.31</td><td>awardtravelfinder top 5</td><td><span class="tg tg-g">Points value page</span></td></tr>
+    <tr><td>amex platinum vs CSR</td><td>8,100</td><td>$18.40</td><td>awardtravelfinder #8</td><td><span class="tg tg-p">Card comparison page</span></td></tr>
+    <tr><td>alaska transfer partners</td><td>1,600</td><td>$1.12</td><td>awardtravelfinder #4</td><td><span class="tg tg-b">Transfer partner guide</span></td></tr>
+    <tr><td>hyatt points value</td><td>2,400</td><td>$2.62</td><td>awardtravelfinder #6</td><td><span class="tg tg-g">Points value page</span></td></tr>
+    <tr><td>ba reward flights</td><td>1,900</td><td>$1.11</td><td>awardtravelfinder #5</td><td><span class="tg tg-r">Airline guide page</span></td></tr>
+    <tr><td>cathay pacific award flights</td><td>480</td><td>$1.29</td><td>awardtravelfinder #4</td><td><span class="tg tg-r">Airline guide page</span></td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ BACKLINKS ══ -->
+<div id="page-backlinks" class="pg">
+  <div class="ph"><div class="ph-eye">Section 4 · Score: 8/100</div><h2>Backlink Profile</h2><p>Full analysis of referring domains, toxic links requiring disavow, anchor text patterns, and a complete link acquisition target list.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Total Backlinks</div><div class="mc-v vd">160</div><div class="mc-s">all links found</div></div>
+    <div class="mc"><div class="mc-l">Referring Domains</div><div class="mc-v vd">79</div><div class="mc-s">unique domains</div></div>
+    <div class="mc"><div class="mc-l">Avg. Domain Auth.</div><div class="mc-v vr">~3</div><div class="mc-s">of referring domains</div></div>
+    <div class="mc"><div class="mc-l">Dofollow Links</div><div class="mc-v vd">119</div><div class="mc-s">74% of total</div></div>
+  </div>
+  <div class="al al-r"><div class="al-t">Toxic link network detected — disavow immediately</div><p>takes.sbs, wants.cfd, blinks.sbs, knows.sbs, knows.monster all share IP 147.135.215.43 (France). Same IP block = Private Blog Network (PBN). These trigger Google's spam detection algorithms. Also: australianwebdirectory.shop, bestwebstats.com, egyptiandirectory.com, globalecommerce.org, pagesearch.net — low-quality web directories all hosted on shared Singapore IPs. Submit a disavow file within 48 hours of reading this.</p></div>
+  <div class="sh"><h3>Backlinks vs. All 8 Competitors</h3></div>
+  <div class="tw"><table><thead><tr><th>Domain</th><th>Backlinks</th><th>Ref. Domains</th><th>Auth.</th><th>Gap vs. FlightPoints</th></tr></thead><tbody>
+    <tr><td><strong>awardtravelfinder.com</strong></td><td>72,718</td><td>302</td><td>21</td><td><span class="tg tg-r">3.8× more domains</span></td></tr>
+    <tr><td><strong>seats.aero</strong></td><td>31,363</td><td>3,155</td><td>43</td><td><span class="tg tg-r">40× more domains</span></td></tr>
+    <tr><td><strong>point.me</strong></td><td>22,038</td><td>2,938</td><td>46</td><td><span class="tg tg-r">37× more domains</span></td></tr>
+    <tr><td><strong>roame.travel</strong></td><td>11,272</td><td>2,270</td><td>34</td><td><span class="tg tg-r">29× more domains</span></td></tr>
+    <tr><td><strong>pointhound.com</strong></td><td>7,326</td><td>321</td><td>28</td><td><span class="tg tg-r">4× more domains</span></td></tr>
+    <tr><td><strong>pointsyeah.com</strong></td><td>2,982</td><td>759</td><td>34</td><td><span class="tg tg-r">10× more domains</span></td></tr>
+    <tr><td><strong>pointspath.com</strong></td><td>2,734</td><td>579</td><td>31</td><td><span class="tg tg-r">7× more domains</span></td></tr>
+    <tr><td><strong>awardtool.com</strong></td><td>1,630</td><td>250</td><td>23</td><td><span class="tg tg-r">3× more domains</span></td></tr>
+    <tr class="hl-row"><td><strong>flightpoints.com</strong></td><td class="td-r">160</td><td class="td-r">79</td><td class="td-r">2</td><td>—</td></tr>
+  </tbody></table></div>
+  <div class="sh"><h3>Referring Domain Analysis — Full Verdict</h3></div>
+  <div class="tw"><table><thead><tr><th>Domain</th><th>Links</th><th>Auth.</th><th>Country</th><th>IP Block</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>takes.sbs</td><td>7</td><td>2</td><td>FR</td><td>147.135.215.43</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>wants.cfd</td><td>5</td><td>2</td><td>FR</td><td>147.135.215.43</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>knows.sbs</td><td>4</td><td>3</td><td>FR</td><td>147.135.215.43</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>blinks.sbs</td><td>3</td><td>2</td><td>FR</td><td>147.135.215.43</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>knows.monster</td><td>3</td><td>2</td><td>FR</td><td>147.135.215.43</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>seol.store</td><td>4</td><td>12</td><td>FR</td><td>same cluster</td><td><span class="tg tg-r">Disavow — PBN</span></td></tr>
+    <tr><td>australianwebdirectory.shop</td><td>3</td><td>3</td><td>SG</td><td>184.168.x.x</td><td><span class="tg tg-r">Disavow — spam dir</span></td></tr>
+    <tr><td>bestwebstats.com</td><td>3</td><td>2</td><td>SG</td><td>184.168.x.x</td><td><span class="tg tg-r">Disavow — spam dir</span></td></tr>
+    <tr><td>egyptiandirectory.com</td><td>3</td><td>2</td><td>SG</td><td>184.168.x.x</td><td><span class="tg tg-a">Low quality</span></td></tr>
+    <tr><td>globalecommerce.org</td><td>3</td><td>2</td><td>SG</td><td>118.139.x.x</td><td><span class="tg tg-a">Low quality</span></td></tr>
+    <tr><td>milesorcash.com</td><td>11</td><td>2</td><td>—</td><td>—</td><td><span class="tg tg-a">Low quality</span></td></tr>
+    <tr><td>pagesearch.net</td><td>3</td><td>2</td><td>SG</td><td>118.139.x.x</td><td><span class="tg tg-a">Low quality</span></td></tr>
+  </tbody></table></div>
+  <div class="al al-a"><div class="al-t">Anchor text is 90%+ URL-only — a clear signal of automated, unnatural links</div><p>73 of 79 referring domains use "flightpoints.com" as the anchor — over 90% of the entire profile. Only one domain uses a keyword anchor ("award flight search tools") and one uses "award seat finder". A natural editorial profile has: 30–40% brand name, 20–30% partial-match keyword, 5–10% exact-match keyword, 20–30% generic/URL. The current distribution signals automated linking, not editorial endorsement.</p></div>
+  <div class="sh"><h3>Link Building Target List — Prioritised</h3></div>
+  <div class="tw"><table><thead><tr><th>Publication</th><th>Type</th><th>Est. DA</th><th>Approach</th><th>Priority</th></tr></thead><tbody>
+    <tr><td>thepointsguy.com</td><td>Travel media</td><td>80+</td><td>Tool mention in search tools roundup</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>nerdwallet.com</td><td>Finance media</td><td>90+</td><td>Award travel tools article pitch</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>frequentmiler.com</td><td>Miles blog</td><td>60+</td><td>Guest post or tool review</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>thriftytraveler.com</td><td>Travel deals</td><td>60+</td><td>Award search tools comparison</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>milevalue.com</td><td>Miles blog</td><td>50+</td><td>Guest post featuring FlightPoints</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>reddit.com/r/awardtravel</td><td>Community</td><td>90+</td><td>Authentic tool mentions in threads</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>creditcardgenius.ca</td><td>Credit cards</td><td>50+</td><td>Tool feature or partnership</td><td><span class="tg tg-b">Medium</span></td></tr>
+    <tr><td>onemileatatime.com</td><td>Travel blog</td><td>70+</td><td>Tool mention or review</td><td><span class="tg tg-b">Medium</span></td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ TECHNICAL SEO ══ -->
+<div id="page-technical" class="pg">
+  <div class="ph"><div class="ph-eye">Section 5 · Score: 40/100</div><h2>Technical SEO</h2><p>Canonicalisation, structured data, JavaScript rendering, international SEO, Core Web Vitals, crawlability, and site architecture issues.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Schema Markup</div><div class="mc-v vr">None</div><div class="mc-s">not implemented anywhere</div></div>
+    <div class="mc"><div class="mc-l">Canonicalisation</div><div class="mc-v vr">Poor</div><div class="mc-s">www vs non-www split</div></div>
+    <div class="mc"><div class="mc-l">International SEO</div><div class="mc-v va">30/100</div><div class="mc-s">hreflang incomplete</div></div>
+    <div class="mc"><div class="mc-l">Core Web Vitals</div><div class="mc-v va">Unknown</div><div class="mc-s">needs live PageSpeed test</div></div>
+  </div>
+  <div class="il">
+    <div class="ii sc"><div>
+      <div class="ii-name">No structured data on any page — invisible to AI Overviews and rich results</div>
+      <div class="ii-desc">Schema markup is essential in 2026 for three things: (1) appearing in Google's AI Overviews for award travel queries (competitors with schema appear; FlightPoints does not), (2) earning rich result SERP features — FAQ dropdowns, breadcrumbs, star ratings — that increase CTR by 20–30%, (3) WebApplication recognition so Google understands the product category. Every competitor with schema earns more clicks for the same position.
+      <br><br>Required implementations:
+      <br>• <strong>WebApplication + SoftwareApplication</strong> schema on /explore and all /explore/[airline] pages — include applicationCategory: "TravelApplication", name, description, url, offers (if paid plan exists)
+      <br>• <strong>Article schema</strong> on every blog post — include headline, author (with Person schema: name, url, description), datePublished, dateModified, image
+      <br>• <strong>FAQPage schema</strong> on all blog posts — extract 4–6 questions from H2/H3 headings and write answers as JSON-LD. Each FAQ block can appear as a rich result expanding the SERP listing
+      <br>• <strong>BreadcrumbList schema</strong> on every page — shows breadcrumb trail in search results
+      <br>• <strong>Organization schema</strong> on homepage — name, url, logo, contactPoint, sameAs (social profiles)</div>
+      <div class="ii-fix">→ Implement all as JSON-LD in the &lt;head&gt;. Validate with Google Rich Results Test. Deploy in order: Organization → BreadcrumbList → Article + FAQ → WebApplication. Estimated 3–4 days of development.</div>
+    </div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sc"><div>
+      <div class="ii-name">www vs non-www canonicalisation — every backlink is splitting its authority value</div>
+      <div class="ii-desc">Semrush shows URLs indexed under both www.flightpoints.com and flightpoints.com. Every backlink pointing to either version splits the authority value that would otherwise be consolidated. This means the 160 current backlinks — already weak — are delivering half the authority they should.
+      <br><br>Fix steps:
+      <br>• Decide canonical: recommend www.flightpoints.com
+      <br>• Implement 301 redirect: flightpoints.com/* → www.flightpoints.com/*
+      <br>• Set preferred domain in Google Search Console (Settings → Change of address is not needed — just verify both properties and set preferred)
+      <br>• Add canonical meta tag to every page: &lt;link rel="canonical" href="https://www.flightpoints.com/[path]"/&gt;
+      <br>• Audit all internal links — update any pointing to the non-canonical version
+      <br>• Check XML sitemap — all URLs should use the canonical version</div>
+      <div class="ii-fix">→ 301 redirect + canonical tags + GSC preferred domain = 1 day of dev work. Maximum impact for minimum effort.</div>
+    </div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sh2"><div>
+      <div class="ii-name">Airline and programme /explore pages have no server-rendered text — Google cannot read them</div>
+      <div class="ii-desc">Pages like /explore/emirates, /explore/united-mileageplus, /routes/[airline] almost certainly render entirely via JavaScript with no server-side text content. Google can execute JavaScript but deprioritises JS-only pages for crawling, and cannot assess keyword relevance for any text that appears only after JavaScript execution.
+      <br><br>These pages have enormous SEO potential: "Emirates award flights", "United MileagePlus search", "Singapore Airlines award availability" — all high-intent searches. But without any indexable text, they rank for nothing.
+      <br><br>Two solutions:
+      <br>• <strong>Preferred:</strong> Server-side render (SSR) or static site generation (SSG) for the introductory content above the search tool
+      <br>• <strong>Acceptable:</strong> Add a static HTML section above the JS-rendered search tool with 200–300 words of introductory content that renders without JavaScript</div>
+      <div class="ii-fix">→ Add 200 words of server-rendered content + FAQ to every /explore/[airline] page. One template, deployed to 25+ pages in 2–3 days.</div>
+    </div><span class="tg tg-a">High</span></div>
+    <div class="ii sh2"><div>
+      <div class="ii-name">International pages across 4+ languages — hreflang almost certainly incomplete or missing</div>
+      <div class="ii-desc">Content exists in Finnish (/fi/), Hebrew (/he/), Spanish (/es/, /es-mx/), and Tagalog (/tl/). The Finnish page /fi/explore/emirates/departure/AS already ranks #27 for "flyselskab emirates" (27,100 monthly searches) — the site's highest-volume keyword achieved with zero content investment. Without proper hreflang implementation:
+      <br>• Google may treat locale pages as duplicate content and penalise or deindex them
+      <br>• Google may not serve them to the correct countries/language audiences
+      <br>• The 27,100-search Finnish keyword opportunity is not being fully captured
+      <br><br>Required implementation:
+      <br>• Add hreflang tags for all language-region pairs: en, fi-FI, he-IL, es, es-MX, tl-PH
+      <br>• Include x-default for users not matching any specific locale
+      <br>• Add all locale variants to the XML sitemap
+      <br>• Ensure hreflang is bidirectional — each page references all other locale versions</div>
+      <div class="ii-fix">→ Implement complete hreflang matrix. Add all locale URLs to XML sitemap. Validate with Google Search Console International Targeting report.</div>
+    </div><span class="tg tg-a">High</span></div>
+    <div class="ii sm"><div>
+      <div class="ii-name">Core Web Vitals — likely problematic for a JavaScript-heavy award search tool</div>
+      <div class="ii-desc">Award flight search tools are data-intensive and JavaScript-heavy. Common CWV issues for this application type:
+      <br>• <strong>LCP (Largest Contentful Paint):</strong> Hero section or first search result loading slowly while JS fetches availability data. Target: under 2.5 seconds
+      <br>• <strong>CLS (Cumulative Layout Shift):</strong> Results loading in dynamically and shifting page layout. Target: under 0.1
+      <br>• <strong>INP (Interaction to Next Paint):</strong> Search form responding slowly on submission. Target: under 200ms
+      <br><br>Common fixes: skeleton loaders for result areas (eliminates CLS), lazy-loading non-critical JS (improves LCP), CDN for all static assets, server-side rendering for above-the-fold content, progressive loading for search results</div>
+      <div class="ii-fix">→ Run PageSpeed Insights on homepage and /explore. Address any "Poor" CWV metrics first. Then "Needs Improvement". Use Lighthouse in Chrome DevTools for detailed diagnostics.</div>
+    </div><span class="tg tg-b">Medium</span></div>
+    <div class="ii sm"><div>
+      <div class="ii-name">XML sitemap completeness — verify all 149 indexed pages are included with locale variants</div>
+      <div class="ii-desc">With 149 indexed URLs across multiple subdomains and locale variants, the XML sitemap must include all pages and update automatically when new content is added. Each locale variant should appear in the sitemap with its corresponding hreflang relationship. Submit the sitemap URL in Google Search Console and verify that all pages are successfully crawled and indexed.</div>
+      <div class="ii-fix">→ Audit sitemap.xml, add missing pages and locale variants, resubmit to GSC. Should be a 1-day task.</div>
+    </div><span class="tg tg-b">Medium</span></div>
+  </div>
+</div>
+
+<!-- ══ ON-PAGE SEO ══ -->
+<div id="page-onpage" class="pg">
+  <div class="ph"><div class="ph-eye">Section 6 · Score: 38/100</div><h2>On-Page SEO</h2><p>Meta titles, heading structure, internal linking, content depth, image alt text, and recommended title tags for every page type.</p></div>
+  <div class="il">
+    <div class="ii sc"><div>
+      <div class="ii-name">Homepage title tag is almost certainly not targeting any primary keyword</div>
+      <div class="ii-desc">The homepage ranks for 21 keywords and drives 0 traffic. The title tag is the single most important on-page ranking signal — it tells Google what the page is about and appears as the blue link in SERPs. If it reads "FlightPoints" or "FlightPoints — Search Award Flights" without containing a specific keyword phrase, it is wasting the highest-value on-page SEO element on the site.
+      <br><br>The primary keyword must appear in the first 40–50 characters of the title. The format should be: [Primary Keyword] — [Differentiating benefit] | [Brand]. Examples:
+      <br>• "Award Flight Search Tool — Find Flights with Miles &amp; Points | FlightPoints" (62 chars) ✓
+      <br>• "Search Award Flights with Points — 30+ Airlines | FlightPoints" (60 chars) ✓</div>
+      <div class="ii-fix">→ Update the homepage title immediately. This single change can double CTR from current SERP impressions within 2 weeks.</div>
+    </div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sc"><div>
+      <div class="ii-name">Blog H1–H2 heading structure does not target keyword variants — missing People Also Ask opportunities</div>
+      <div class="ii-desc">For a post targeting "how to get flight points", the H1 must contain the exact phrase or a semantically close variant. H2 sections should answer the specific questions Google shows in People Also Ask for that keyword. This H2 structure then becomes the FAQ sections that can be marked up with FAQPage schema — generating rich result FAQ dropdowns that occupy significantly more SERP real estate than a normal result.
+      <br><br>Current posts likely have H2 headings that are generic section titles rather than keyword-rich question formats. Audit each post's H2 structure against the PAA questions Google shows for the target keyword. For "how to get flight points", PAA shows: "How do I earn airline miles?", "What is the fastest way to get free flights?", "How many points do you need for a free flight?"</div>
+      <div class="ii-fix">→ Audit every blog post's H2 structure. Rewrite H2s as questions. Add FAQPage schema. Each post that implements this can earn a FAQ rich result.</div>
+    </div><span class="tg tg-r">Critical</span></div>
+    <div class="ii sh2"><div>
+      <div class="ii-name">Internal linking between blog content and the search tool is weak or absent</div>
+      <div class="ii-desc">Every blog post about award flights is a natural funnel into the FlightPoints search tool. A post titled "How to Book Award Flights" that does not link to the tool is leaving its primary conversion opportunity unused. Each post should contain:
+      <br>• 2–3 contextual internal links to /explore or the specific airline programme page being discussed
+      <br>• Keyword-rich anchor text: "search Emirates award flights in FlightPoints" not "click here"
+      <br>• A prominent CTA section midway through and at the end: "Ready to search? Try the FlightPoints award tool →"
+      <br><br>Internal links also pass PageRank between pages — strong internal linking from multiple blog posts to a specific /explore/[airline] page signals topical authority to Google for that airline's keywords.</div>
+      <div class="ii-fix">→ Add 2–3 contextual CTAs with keyword-rich anchors to every blog post. This can be done in 1 day across all 15 posts.</div>
+    </div><span class="tg tg-a">High</span></div>
+    <div class="ii sh2"><div>
+      <div class="ii-name">Meta descriptions missing or auto-generated on most pages</div>
+      <div class="ii-desc">When meta descriptions are not set, Google auto-generates them from page content — often choosing a random paragraph that doesn't include the target keyword or a CTA. Custom descriptions do not directly affect rankings but significantly affect CTR from search results. Even a 1% improvement on current impressions meaningfully increases traffic.
+      <br><br>Template: [Primary keyword] + [Benefit statement] + [CTA]. 150–160 characters. Example for homepage: "Search award flights across 30+ loyalty programs instantly. Compare business class costs with miles on Emirates, Qatar, Singapore & more. Free — no account needed."</div>
+      <div class="ii-fix">→ Write custom meta descriptions for every page. Start with homepage and the 5 highest-impression blog posts (check GSC for impressions data).</div>
+    </div><span class="tg tg-a">High</span></div>
+  </div>
+  <div class="sh"><h3>Recommended Title Tags — Every Key Page Type</h3></div>
+  <div class="tw"><table><thead><tr><th>Page</th><th>Recommended Title Tag</th><th>Chars</th></tr></thead><tbody>
+    <tr><td>Homepage</td><td>Award Flight Search Tool — Find Flights with Miles | FlightPoints</td><td>62</td></tr>
+    <tr><td>/explore</td><td>Search Award Flights with Points — All Airlines | FlightPoints</td><td>58</td></tr>
+    <tr><td>/explore/emirates</td><td>Emirates Award Flights — Search with Miles &amp; Points | FlightPoints</td><td>62</td></tr>
+    <tr><td>/explore/united-mileageplus</td><td>United MileagePlus Awards — Search &amp; Book with Points | FlightPoints</td><td>64</td></tr>
+    <tr><td>/explore/qatar-airways</td><td>Qatar Airways Award Flights — Search Avios &amp; Partner Miles | FlightPoints</td><td>66</td></tr>
+    <tr><td>/blogs/step-by-step-guide/</td><td>How to Book Award Flights with Points: Step-by-Step Guide 2026</td><td>60</td></tr>
+    <tr><td>/blogs/airline-alliances/</td><td>Star Alliance vs OneWorld vs SkyTeam: Complete 2026 Comparison</td><td>60</td></tr>
+    <tr><td>/blogs/award-search-tool/</td><td>8 Best Award Flight Search Tools 2026 — Compared &amp; Ranked</td><td>57</td></tr>
+    <tr><td>/blogs/award-availability/</td><td>How Airline Award Availability Works: The Complete Guide 2026</td><td>58</td></tr>
+    <tr><td>/award-flight-search (new)</td><td>Award Flight Search Tool — Find Award Seats Instantly | FlightPoints</td><td>64</td></tr>
+    <tr><td>/transfer-bonuses (new)</td><td>Current Credit Card Transfer Bonuses 2026 — All Programmes Tracked</td><td>62</td></tr>
+    <tr><td>/marriott-points-value (new)</td><td>Marriott Bonvoy Points Value 2026 — Best Redemptions &amp; Calculator</td><td>62</td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ CONTENT STRATEGY ══ -->
+<div id="page-content" class="pg">
+  <div class="ph"><div class="ph-eye">Section 7 · Score: 35/100</div><h2>Content Strategy</h2><p>Blog post assessment, E-E-A-T compliance, content gaps by category, and what competitors are publishing that drives their traffic.</p></div>
+  <div class="cards c4">
+    <div class="mc"><div class="mc-l">Blog Posts Indexed</div><div class="mc-v vd">~15</div><div class="mc-s">in Google's index</div></div>
+    <div class="mc"><div class="mc-l">Posts with Traffic</div><div class="mc-v vr">0</div><div class="mc-s">meaningful organic visits</div></div>
+    <div class="mc"><div class="mc-l">Schema Markup</div><div class="mc-v vr">None</div><div class="mc-s">on any blog post</div></div>
+    <div class="mc"><div class="mc-l">E-E-A-T Rating</div><div class="mc-v vr">Low</div><div class="mc-s">no author credentials</div></div>
+  </div>
+  <div class="al al-r"><div class="al-t">E-E-A-T Warning — Award travel is a YMYL (Your Money or Your Life) category</div><ul>
+    <li>Award travel involves financial decisions about credit cards and points worth thousands of dollars — Google applies heightened quality scrutiny</li>
+    <li>All blog posts must have: a named author with verifiable travel credentials, publication date, last-updated date, and cited sources</li>
+    <li>The site must have: About page with team information, Contact page, Privacy Policy, and Terms of Service</li>
+    <li>Without these signals, Google's quality raters will downgrade E-E-A-T regardless of content length or keyword targeting</li>
+    <li>Competitors like point.me and roame have named authors with travel credentials on every post</li>
+  </ul></div>
+  <div class="sh"><h3>Blog Post Assessment — What Needs to Change</h3></div>
+  <div class="il">
+    <div class="ii sc"><div><div class="ii-name">/blogs/award-search-tool/ — Most commercially important post, ranking #78–97</div><div class="ii-desc">Targets "award tool" (#78), "award travel search" (#97), "best award flight search engine" (#97). This is the page most likely to drive tool signups — but it barely exists in SERPs. Complete rewrite required: "8 Best Award Flight Search Tools in 2026 — Compared and Ranked." 3,000+ words, comparison table, individual tool sections, FlightPoints featured prominently, FAQPage schema, 3–5 targeted backlinks to this specific URL.</div><div class="ii-fix">→ Complete rewrite · Feature FlightPoints prominently · Target positions 5–15</div></div><span class="tg tg-r">Rewrite</span></div>
+    <div class="ii sh2"><div><div class="ii-name">/blogs/step-by-step-guide/ — 9 keywords ranked, all at positions 32–70</div><div class="ii-desc">Ranks for "how to get flight points" (#32), "book flight with miles" (#47), "fly with points" (#58), "what is award travel" (#36), "book with points" (#39). All positions are 32–70. Expand to 3,000+ words: step-by-step numbered structure, H2 sections targeting each keyword variant, FAQ schema (5+ PAA questions), screenshots of FlightPoints search, and 2–3 contextual internal links to the tool.</div><div class="ii-fix">→ Expand to 3,000 words · Add FAQ schema · Add internal CTAs to /explore</div></div><span class="tg tg-a">Expand</span></div>
+    <div class="ii sh2"><div><div class="ii-name">/blogs/airline-alliances-explained/ — 14 keywords, highest-volume blog post</div><div class="ii-desc">Ranks for "skyteam or star alliance" (#50), "star alliance oneworld skyteam" (#57), "is lufthansa part of oneworld" (#32). Add: structured table of all alliance members with airlines listed per alliance, comparison chart by route coverage, member airline count by region, and 2–3 targeted backlinks to this specific URL. Also add internal links to relevant /explore/[airline] pages.</div><div class="ii-fix">→ Add alliance member tables · Build 2–3 backlinks to this URL · Target positions 10–20</div></div><span class="tg tg-a">Optimise</span></div>
+    <div class="ii sp"><div><div class="ii-name">/blogs/how-airline-award-availability-really-works/ — The only page one blog ranking</div><div class="ii-desc">Ranks #9 and #14 for "flight availability meaning" (40/mo). This is the only blog post achieving page one. Analyse its structure: likely has a strong keyword-to-content match, good H2 structure, and appropriate content length. Use it as the template for all revised and new blog posts.</div><div class="ii-fix">→ Maintain and protect this ranking · Use its structure as a template for all posts</div></div><span class="tg tg-g">Best practice</span></div>
+  </div>
+  <div class="sh"><h3>Content Gaps — Categories Competitors Own That FlightPoints Does Not</h3></div>
+  <div class="tw"><table><thead><tr><th>Missing Content Type</th><th>Top Keyword · Volume</th><th>CPC</th><th>Who Owns It</th><th>Priority</th></tr></thead><tbody>
+    <tr><td>Transfer bonus tracker</td><td>amex transfer bonus · 5,400/mo</td><td>$10.02</td><td>roame, awardtravelfinder, point.me</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>Points value pages (per programme)</td><td>marriott bonvoy points value · 4,400/mo</td><td>$2.31</td><td>awardtravelfinder (343 kws, 560 vis)</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>Transfer partner guides</td><td>alaska transfer partners · 1,600/mo</td><td>$1.12</td><td>awardtravelfinder (383 vis/mo)</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>Card comparison pages</td><td>amex platinum vs CSR · 8,100/mo</td><td>$18.40</td><td>awardtravelfinder (190 vis/mo)</td><td><span class="tg tg-r">Critical</span></td></tr>
+    <tr><td>Airline award guide pages</td><td>ba reward flights · 1,900/mo</td><td>$1.11</td><td>awardtravelfinder (124 vis/mo)</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>Credit card transfer guides</td><td>wells fargo transfer partners · 1,900/mo</td><td>$6.17</td><td>awardtravelfinder (63 vis/mo)</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>Points value calculator tool</td><td>points vs cash calculator · 1,000/mo</td><td>$5.17</td><td>seats.aero (1,077 vis), awardtravelfinder (147 vis)</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>Route-specific award pages</td><td>cheapest reward flights europe to SFO · 390/mo</td><td>—</td><td>awardtravelfinder (route pages built)</td><td><span class="tg tg-a">High</span></td></tr>
+    <tr><td>Award chart pages per airline</td><td>aadvantage award chart · 390/mo</td><td>$1.38</td><td>awardtravelfinder (79 vis/mo)</td><td><span class="tg tg-b">Medium</span></td></tr>
+    <tr><td>Competitor comparison pages</td><td>awardhacker · 1,900/mo</td><td>$1.54</td><td>awardtravelfinder /compare section</td><td><span class="tg tg-b">Medium</span></td></tr>
+    <tr><td>Lounge reviews</td><td>greenwich lounge jfk · 1,000/mo</td><td>—</td><td>roame (418 vis/mo, #2)</td><td><span class="tg tg-b">Medium</span></td></tr>
+    <tr><td>Airline first class reviews</td><td>ana first class · 2,400/mo</td><td>$1.21</td><td>roame (201 vis/mo, #2)</td><td><span class="tg tg-b">Medium</span></td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ COMPETITOR MATRIX ══ -->
+<div id="page-compmatrix" class="pg">
+  <div class="ph"><div class="ph-eye">Competitive Intelligence</div><h2>8-Competitor Matrix</h2><p>Side-by-side data across all 8 direct competitors from live Semrush. Every key metric and traffic source breakdown.</p></div>
+  <div class="al al-p"><div class="al-t">The single most important competitive finding</div><p>Award Travel Finder is the only competitor generating traffic from content rather than brand recognition. Every other tool relies 93–99% on branded keyword searches. This means <strong>the entire informational keyword territory is almost uncontested</strong> — Award Travel Finder has it by default, and anyone who builds faster with higher authority can take it from them.</p></div>
+  <div class="sh"><h3>Full Competitor Matrix — Live Semrush Data</h3></div>
+  <div class="tw"><table><thead><tr><th>Domain</th><th>DA</th><th>Ref. Domains</th><th>Backlinks</th><th>Monthly Traffic</th><th>Keywords</th><th>Traffic Value</th><th>Brand %</th><th>Killing Strategy</th></tr></thead><tbody>
+    <tr><td><strong>point.me</strong></td><td>46</td><td>2,938</td><td>22,038</td><td>~77,000</td><td>31,750+</td><td>~$262K</td><td>~40%</td><td><span class="tg tg-p">Amex partnership</span></td></tr>
+    <tr><td><strong>seats.aero</strong></td><td>43</td><td>3,155</td><td>31,363</td><td>~61,000</td><td>12,700+</td><td>~$108K</td><td>~93%</td><td><span class="tg tg-r">Press authority</span></td></tr>
+    <tr><td><strong>roame.travel</strong></td><td>34</td><td>2,270</td><td>11,272</td><td>36,342</td><td>19,095</td><td>$146K</td><td>~73%</td><td><span class="tg tg-a">Transfer bonus tracker</span></td></tr>
+    <tr><td><strong>pointsyeah</strong></td><td>34</td><td>759</td><td>2,982</td><td>~49,000</td><td>4,200+</td><td>~$20K</td><td>~98%</td><td><span class="tg tg-g">Memorable brand</span></td></tr>
+    <tr><td><strong>pointspath</strong></td><td>31</td><td>579</td><td>2,734</td><td>~5,730</td><td>500+</td><td>~$15K</td><td>~97%</td><td><span class="tg tg-b">Chrome extension</span></td></tr>
+    <tr><td><strong>pointhound</strong></td><td>28</td><td>321</td><td>7,326</td><td>18,742</td><td>4,233</td><td>$52K</td><td>~98%</td><td><span class="tg tg-b">Community / social</span></td></tr>
+    <tr><td><strong>awardtool</strong></td><td>23</td><td>250</td><td>1,630</td><td>~6,100</td><td>318+</td><td>~$8K</td><td>~99%</td><td><span class="tg tg-p">Freemium tool</span></td></tr>
+    <tr class="grn-row"><td><strong>awardtravelfinder</strong></td><td>21</td><td>302</td><td>72,718</td><td>~4,770</td><td>2,000+</td><td>~$30K</td><td>~4%</td><td><span class="tg tg-g">Programmatic SEO</span></td></tr>
+  </tbody></table></div>
+  <div class="sh"><h3>Top-Performing Content Pages — Every Competitor</h3></div>
+  <div class="tw"><table><thead><tr><th>Domain</th><th>Top Traffic Page</th><th>Keywords</th><th>Traffic/mo</th><th>Strategy Type</th></tr></thead><tbody>
+    <tr><td>point.me</td><td class="turl">/help/american-express-overview</td><td>1,898</td><td>29,235</td><td><span class="tg tg-p">Amex partnership</span></td></tr>
+    <tr><td>seats.aero</td><td class="turl">/ (homepage)</td><td>4,305</td><td>56,582</td><td><span class="tg tg-r">Brand tool</span></td></tr>
+    <tr><td>seats.aero</td><td class="turl">/tools/calculator</td><td>406</td><td>1,077</td><td><span class="tg tg-g">Points calculator tool</span></td></tr>
+    <tr><td>roame.travel</td><td class="turl">/guides/points-transfer-bonuses</td><td>1,649</td><td>1,490</td><td><span class="tg tg-a">Transfer bonus tracker ★</span></td></tr>
+    <tr><td>roame.travel</td><td class="turl">/guides/singaporeair-first-class-routes</td><td>222</td><td>606</td><td><span class="tg tg-a">Airline review</span></td></tr>
+    <tr><td>pointsyeah</td><td class="turl">/ (homepage)</td><td>2,436</td><td>47,844</td><td><span class="tg tg-r">Brand tool</span></td></tr>
+    <tr><td>pointsyeah</td><td class="turl">/blog/posts/current-credit-card-transfer-bonuses</td><td>340</td><td>510</td><td><span class="tg tg-a">Transfer bonus content</span></td></tr>
+    <tr><td>awardtravelfinder</td><td class="turl">/marriott-point-values</td><td>343</td><td>560</td><td><span class="tg tg-g">Points value page ★</span></td></tr>
+    <tr><td>awardtravelfinder</td><td class="turl">/transfer-partners/alaska-airlines-mileage-plan</td><td>94</td><td>383</td><td><span class="tg tg-g">Transfer partner guide</span></td></tr>
+    <tr><td>awardtravelfinder</td><td class="turl">/tools/points-value-calculator</td><td>167</td><td>147</td><td><span class="tg tg-g">Interactive calculator tool</span></td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ AWARD TRAVEL FINDER ══ -->
+<div id="page-atf" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive — Priority #1</div><h2>Award Travel Finder — The Most Important Competitor</h2><p>awardtravelfinder.com · DA 21 · 302 referring domains · 72,718 backlinks · ~4,770 monthly visits · 96% content-driven</p></div>
+  <div class="al al-g"><div class="al-t">Why this competitor changes everything</div><p>Award Travel Finder is the only player building content at scale via programmatic SEO. With DA 21 — barely above where FlightPoints could be in 6 months — they generate ~4,770 monthly visits from a comprehensive content architecture covering every keyword cluster in the award travel space. They prove the strategy works at low authority. With DA 30+, this strategy would work dramatically faster. Every element of their approach can be replicated and improved upon.</p></div>
+
+  <div class="sh"><h3>Their Full Content Architecture</h3></div>
+  <div class="tw"><table><thead><tr><th>Content Silo</th><th>URL Pattern</th><th>Est. Pages</th><th>Avg. Traffic/Page</th><th>Best Keyword</th></tr></thead><tbody>
+    <tr><td><strong>Points value pages</strong></td><td>/[programme]-point-values</td><td>12–15</td><td>128–560/mo</td><td>marriott bonvoy points value (2,900/mo)</td></tr>
+    <tr><td><strong>Transfer partner guides</strong></td><td>/transfer-partners/[airline]</td><td>20–30</td><td>33–383/mo</td><td>alaska transfer partners (1,600/mo)</td></tr>
+    <tr><td><strong>Credit card transfer guides</strong></td><td>/credit-card-transfers/[card]</td><td>15–20</td><td>38–139/mo</td><td>us bank transfer partners (390/mo) · $12.67 CPC</td></tr>
+    <tr><td><strong>Transfer bonus tracker</strong></td><td>/transfer-bonuses/[programme]</td><td>10–15</td><td>39–203/mo</td><td>amex transfer bonus (5,400/mo) · $10 CPC</td></tr>
+    <tr><td><strong>Card comparison pages</strong></td><td>/card-comparisons/[card-vs-card]</td><td>5–8</td><td>154–190/mo</td><td>amex platinum vs CSR (8,100/mo) · $18.40 CPC</td></tr>
+    <tr><td><strong>Airline award guides</strong></td><td>/airlines/[airline]</td><td>15–20</td><td>59–124/mo</td><td>ba reward flights (1,900/mo)</td></tr>
+    <tr><td><strong>Award charts per airline</strong></td><td>/award-charts/[airline]</td><td>8–12</td><td>79+/mo</td><td>aadvantage award chart (390/mo)</td></tr>
+    <tr><td><strong>Route pages (city pairs)</strong></td><td>/routes/[city-to-city]</td><td>50–200+</td><td>varies</td><td>reward flights europe to SFO (390/mo) · #3</td></tr>
+    <tr><td><strong>Competitor comparisons</strong></td><td>/compare/[tool-name]</td><td>8+</td><td>59+/mo</td><td>awardhacker (1,900/mo) · #7</td></tr>
+    <tr><td><strong>Interactive tools</strong></td><td>/tools/[calculator]</td><td>2–3</td><td>147/mo</td><td>points vs cash calculator (1,000/mo)</td></tr>
+    <tr><td><strong>Localised content</strong></td><td>/de/, /ko/, /ja/ etc.</td><td>100+</td><td>varies</td><td>jetblue transfer partners (DE) (1,600/mo)</td></tr>
+  </tbody></table></div>
+
+  <div class="sh"><h3>Route Pages — The JFK→NRT Model Decoded</h3></div>
+  <div class="al al-b"><div class="al-t">What each route page contains — confirmed from live page inspection</div><ul>
+    <li><strong>Title:</strong> "[City A] to [City B] Award Flights | Points &amp; Miles | Award Travel Finder"</li>
+    <li><strong>Intro paragraph:</strong> Route served by [X airlines], [Y loyalty programs] to compare, award prices start from [Z points] in economy</li>
+    <li><strong>Points comparison table:</strong> All 10–11 programmes × economy/business/first class prices</li>
+    <li><strong>Best value callout:</strong> "Cheapest option is [Programme] at [X points] for economy/business class"</li>
+    <li><strong>Programme list:</strong> All programmes that can book this route with links to each transfer partner page</li>
+    <li><strong>FAQ section:</strong> "How many points to fly [route]?", "What is the best programme for [route]?", "What airlines serve [route]?"</li>
+    <li><strong>Live search CTA:</strong> Direct link into the award search tool for that specific route</li>
+    <li><strong>FlightPoints advantage:</strong> Their pricing data is static/approximate. FlightPoints has real-time award availability — a significantly more useful and more linkable page</li>
+  </ul></div>
+
+  <div class="sh"><h3>Confirmed Route Pages (From Search Data)</h3></div>
+  <div class="tw"><table><thead><tr><th>Route Page URL</th><th>Target Keyword</th><th>Volume</th><th>Position</th></tr></thead><tbody>
+    <tr><td class="turl">/routes/paris-to-san-francisco</td><td>cheapest reward point flights europe to san francisco bay area</td><td>390</td><td>#3</td></tr>
+    <tr><td class="turl">/routes/new-york-to-tokyo</td><td>new york to tokyo award flights</td><td>varies</td><td>Ranking</td></tr>
+    <tr><td class="turl">/routes/los-angeles-to-sydney</td><td>los angeles to sydney award flights</td><td>varies</td><td>Ranking</td></tr>
+    <tr><td class="turl">/routes/paris-to-lisbon</td><td>paris to lisbon award flights</td><td>varies</td><td>Ranking</td></tr>
+    <tr><td>LHR-JFK, SYD-LAX, LHR-SIN, JFK-DOH, SFO-NRT</td><td>Featured on search interface page</td><td>varies</td><td>Built</td></tr>
+  </tbody></table></div>
+
+  <div class="sh"><h3>Top 20 Traffic Pages — Live Semrush Data</h3></div>
+  <div class="tw"><table><thead><tr><th>URL</th><th>Keywords</th><th>Traffic/mo</th><th>Content Type</th></tr></thead><tbody>
+    <tr><td class="turl">/marriott-point-values</td><td>343</td><td>560</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/transfer-partners/alaska-airlines-mileage-plan</td><td>94</td><td>383</td><td><span class="tg tg-b">Transfer partner</span></td></tr>
+    <tr><td class="turl">/chase-points-value</td><td>242</td><td>308</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/transfer-bonuses/amex-membership-rewards</td><td>81</td><td>203</td><td><span class="tg tg-a">Transfer bonus</span></td></tr>
+    <tr><td class="turl">/card-comparisons/amex-platinum-vs-chase-sapphire-reserve</td><td>68</td><td>190</td><td><span class="tg tg-p">Card comparison</span></td></tr>
+    <tr><td class="turl">/hilton-point-values</td><td>91</td><td>170</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/hyatt-point-values</td><td>104</td><td>158</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/card-comparisons/amex-gold-vs-chase-sapphire-preferred</td><td>23</td><td>154</td><td><span class="tg tg-p">Card comparison</span></td></tr>
+    <tr><td class="turl">/transfer-partners/american-airlines-aadvantage</td><td>113</td><td>150</td><td><span class="tg tg-b">Transfer partner</span></td></tr>
+    <tr><td class="turl">/tools/points-value-calculator</td><td>167</td><td>147</td><td><span class="tg tg-r">Interactive tool</span></td></tr>
+    <tr><td class="turl">/credit-card-transfers/us-bank-altitude</td><td>10</td><td>139</td><td><span class="tg tg-b">Card transfer guide</span></td></tr>
+    <tr><td class="turl">/southwest-points-value</td><td>194</td><td>128</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/airlines/british-airways</td><td>88</td><td>124</td><td><span class="tg tg-r">Airline guide</span></td></tr>
+    <tr><td class="turl">/capital-one-miles-value</td><td>20</td><td>92</td><td><span class="tg tg-g">Points value</span></td></tr>
+    <tr><td class="turl">/transfer-bonuses/capital-one-miles</td><td>42</td><td>88</td><td><span class="tg tg-a">Transfer bonus</span></td></tr>
+    <tr><td class="turl">/award-charts/american-airlines</td><td>65</td><td>79</td><td><span class="tg tg-gr">Award chart</span></td></tr>
+    <tr><td class="turl">/airlines/cathay-pacific</td><td>25</td><td>66</td><td><span class="tg tg-r">Airline guide</span></td></tr>
+    <tr><td class="turl">/compare/award-hacker</td><td>2</td><td>59</td><td><span class="tg tg-p">Competitor comparison</span></td></tr>
+    <tr><td class="turl">/airlines/qatar-airways</td><td>16</td><td>59</td><td><span class="tg tg-r">Airline guide</span></td></tr>
+    <tr><td class="turl">/ko/transfer-partners/delta-skymiles</td><td>18</td><td>33</td><td><span class="tg tg-b">Localised content</span></td></tr>
+  </tbody></table></div>
+</div>
+
+<!-- ══ COMPETITORS 2–8 ══ -->
+<div id="page-seats" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>seats.aero — The Press Authority Leader</h2><p>DA 43 · 3,155 referring domains · 31,363 backlinks · ~61,000 monthly visits</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Be the default tool mentioned in every travel publication</div><p>93% of seats.aero's traffic is branded — built entirely on being mentioned in every "best award search tools" roundup ever written. 3,155 referring domains at DA 43 from a tool-only strategy with minimal content. Their programme-specific pages (/aeroplan, /qatar, /anaf) each rank for 200–700 keywords from simple dedicated URLs. Their points calculator drives 1,077 visits/month from 406 keywords. Their Friday deals page earns links from deal aggregators. Killing strategy: be the best-known tool through press, not content.</p></div>
+  <div class="sh"><h3>Top Pages &amp; Keywords</h3></div>
+  <div class="tw"><table><thead><tr><th>Page / Keyword</th><th>Keywords</th><th>Traffic/mo</th><th>Lesson for FlightPoints</th></tr></thead><tbody>
+    <tr><td>Homepage · "award flight search" #1</td><td>4,305</td><td>56,582</td><td>Brand press coverage compounds forever</td></tr>
+    <tr><td>/tools/calculator · "points calculator" #3</td><td>406</td><td>1,077</td><td>One calculator page = 406 keywords</td></tr>
+    <tr><td>/aeroplan · programme-specific page</td><td>224</td><td>568</td><td>Simple dedicated URL per programme works</td></tr>
+    <tr><td>/friday · promo/deals page · "promo code" #1</td><td>39</td><td>479</td><td>Deals page earns links from deal sites</td></tr>
+    <tr><td>/qatar · Qatar Airways programme page</td><td>68</td><td>205</td><td>Minimal content per programme = rankings</td></tr>
+    <tr><td>/anaf · ANA programme page</td><td>707</td><td>162</td><td>Programme pages can rank for 700+ keywords</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-roame" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>roame.travel — The Content &amp; Value Leader</h2><p>DA 34 · 2,270 referring domains · 11,272 backlinks · 36,342 monthly visits · $146,519 traffic value</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Transfer bonus tracker + lounge reviews + airline guides = a self-sustaining content flywheel</div><p>Roame is the traffic and value leader. Their /guides/points-transfer-bonuses page ranks for 1,649 keywords and drives 1,490 visits/month — the single highest-performing content page in this entire competitive space. Lounge reviews (Greenwich JFK: 418 vis/mo, Club LAS: 238 vis/mo) earn constant editorial links. Their Amex Platinum card page drives 1,976 visits/month. citi transfer partners at $279 CPC is their most valuable single ranking. The entire model compounds: content earns links, links build authority, authority improves rankings, rankings drive more content investment.</p></div>
+  <div class="sh"><h3>Top Pages &amp; Keywords</h3></div>
+  <div class="tw"><table><thead><tr><th>Page / Keyword</th><th>Keywords</th><th>Traffic/mo</th><th>Lesson for FlightPoints</th></tr></thead><tbody>
+    <tr><td>/guides/points-transfer-bonuses · chase/amex/citi transfer bonus</td><td>1,649</td><td>1,490</td><td>1 page · 1,649 keywords · $279 CPC keywords inside</td></tr>
+    <tr><td>/credit-cards/amex-platinum · roame amex platinum</td><td>7</td><td>1,976</td><td>Credit card partnership pages drive massive traffic</td></tr>
+    <tr><td>/guides/greenwich-lounge-jfk-review · greenwich lounge jfk #2</td><td>86</td><td>418</td><td>Lounge reviews earn links constantly</td></tr>
+    <tr><td>/guides/alaska-airlines-ultimate-guide</td><td>489</td><td>437</td><td>Airline guides rank for hundreds of keywords</td></tr>
+    <tr><td>/guides/citi-transfer · citi transfer partners $279 CPC #4</td><td>79</td><td>389</td><td>Highest-value single keyword in the space</td></tr>
+    <tr><td>/guides/ana-first-class-review-sfo-nrt · ana first class #2</td><td>86</td><td>201</td><td>First class reviews are linkable &amp; shareable</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-pointme" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>point.me — The Partnership &amp; Content Leader</h2><p>DA 46 · 2,938 referring domains · 22,038 backlinks · ~77,000 monthly visits · ~$262K traffic value</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Amex partnership (29K visits from 1 page) + comprehensive /insights/ content blog</div><p>point.me has two major advantages: (1) An American Express partnership page that drives 29,235 visits/month from 1,898 keywords — more traffic than most entire competitor sites. (2) Their /insights/ blog targets airline partner guides (249–258 keywords each, 700–1,200 visits/month), points value pages (887 keywords for AA miles page), and a transfer bonus tracker (357 keywords, 850 visits/month). Their individual airline partner guides are the second-most efficient content play in this space after awardtravelfinder's format — each page ranks for 200–900 keywords from one template.</p></div>
+  <div class="sh"><h3>Top Pages &amp; Keywords</h3></div>
+  <div class="tw"><table><thead><tr><th>Page / Keyword</th><th>Keywords</th><th>Traffic/mo</th><th>Lesson for FlightPoints</th></tr></thead><tbody>
+    <tr><td>/help/american-express-overview · amex point me variants</td><td>1,898</td><td>29,235</td><td>One partnership deal = 29K monthly visits</td></tr>
+    <tr><td>/insights/air-france-klm-partner-airlines/</td><td>249</td><td>1,223</td><td>Airline partner guides rank for 250+ keywords each</td></tr>
+    <tr><td>/insights/how-much-are-american-airlines-miles-worth/</td><td>887</td><td>1,039</td><td>Points value pages rank for 900 keywords</td></tr>
+    <tr><td>/insights/current-transfer-bonuses/</td><td>357</td><td>850</td><td>Transfer bonus tracker = 357 keywords, 850 visits</td></tr>
+    <tr><td>/insights/the-complete-guide-to-qatar-airways-privilege-club/</td><td>261</td><td>780</td><td>Airline guides can drive 780 visits/month each</td></tr>
+    <tr><td>/insights/how-much-are-chase-points-worth/</td><td>658</td><td>412</td><td>Points value pages have enormous keyword depth</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-awardtool" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>awardtool.com — The Freemium Tool Model</h2><p>DA 23 · 250 referring domains · 1,630 backlinks · ~6,097 monthly visits</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Build the best tool, make it free, earn press mentions, authority grows without content</div><p>awardtool ranks #2 for "award flight search" and #3 for "award flight search tool" with zero meaningful content and only 250 referring domains. The freemium model (free tool + /pro subscription at $2.64 CPC searches) creates natural virality — users share it because it's free, press mentions it because it's accessible. 99% of traffic is branded but that brand was built entirely by tool quality and shareability. Lesson: a genuinely great free tool that earns press mentions builds DA 23 and authority without any content investment.</p></div>
+  <div class="tw"><table><thead><tr><th>Keyword</th><th>Position</th><th>Volume</th><th>CPC</th></tr></thead><tbody>
+    <tr><td>awardtool (brand)</td><td><span class="pos pp1">#1</span></td><td>3,600</td><td>$1.16</td></tr>
+    <tr><td>award tool</td><td><span class="pos pp1">#1</span></td><td>1,900</td><td>$1.07</td></tr>
+    <tr><td>award flight search</td><td><span class="pos pp1">#3</span></td><td>1,900</td><td>$0.75</td></tr>
+    <tr><td>award flight search tool</td><td><span class="pos pp1">#2</span></td><td>1,900</td><td>$0.73</td></tr>
+    <tr><td>award travel</td><td><span class="pos pp1">#2</span></td><td>720</td><td>$1.65</td></tr>
+    <tr><td>award flights</td><td><span class="pos pp1">#2</span></td><td>720</td><td>$1.45</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-pointhound" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>pointhound.com — The Community-Driven Brand</h2><p>DA 28 · 321 referring domains · 7,326 backlinks · 18,742 monthly visits</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Word-of-mouth brand awareness — 14,800 monthly brand searches at only DA 28</div><p>14,800 monthly searches for "pointhound" at DA 28 with only 321 referring domains is extraordinary. For reference, "roame" has 14,800 monthly searches at DA 34 with 2,270 referring domains. This level of brand awareness at low authority suggests strong social media, newsletter, or community distribution driving direct word-of-mouth. 98.18% of all traffic goes to the homepage. Their /digest newsletter page drives 103 visits/month — pointing to an email-first audience building strategy. Lesson: community and audience building can generate brand searches that outpace SEO authority significantly.</p></div>
+  <div class="tw"><table><thead><tr><th>Keyword</th><th>Position</th><th>Volume</th><th>CPC</th></tr></thead><tbody>
+    <tr><td>pointhound (brand)</td><td><span class="pos pp1">#1</span></td><td>14,800</td><td>$2.54</td></tr>
+    <tr><td>point hound</td><td><span class="pos pp1">#1</span></td><td>4,400</td><td>$2.54</td></tr>
+    <tr><td>points flight search</td><td><span class="pos pnr">#4</span></td><td>480</td><td>$0.83</td></tr>
+    <tr><td>top flight deals</td><td><span class="pos pp1">#1</span></td><td>70</td><td>$1.31</td></tr>
+    <tr><td>flight tickets (generic)</td><td><span class="pos pfr">#40</span></td><td>110,000</td><td>$0.66</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-pyeah" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>pointsyeah.com — The Memorable Brand &amp; Core Tool Keyword Holder</h2><p>DA 34 · 759 referring domains · 2,982 backlinks · ~49,000 monthly visits</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Memorable brand name that generates 40,000+ monthly brand searches + #2 for core tool keywords</div><p>"PointsYeah" and "Points Yeah" generate 40,300 combined monthly searches. With only 759 referring domains they've achieved DA 34 and rank #2 for "award flight search" (1,900/mo) and #2 for "award travel search" (480/mo). The brand name is clever, positive, and category-relevant — easy to remember and share. Their transfer bonus blog post (/blog/posts/current-credit-card-transfer-bonuses) ranks for 340 keywords and drives 510 visits/month from one post. Their Daydream Explorer feature page drives 85 visits/month. Lesson: a memorable brand name compounds independently of SEO and can reach DA 34 with fewer referring domains than any other competitor.</p></div>
+  <div class="tw"><table><thead><tr><th>Page / Keyword</th><th>Keywords</th><th>Traffic/mo</th><th>Lesson</th></tr></thead><tbody>
+    <tr><td>Homepage · pointsyeah brand #1 · award flight search #2</td><td>2,436</td><td>47,844</td><td>Brand name + tool keywords both owned simultaneously</td></tr>
+    <tr><td>/blog/posts/current-credit-card-transfer-bonuses</td><td>340</td><td>510</td><td>One transfer bonus post = 340 keywords</td></tr>
+    <tr><td>/blog/posts/pointsyeahs-fhr-filter (feature guide)</td><td>96</td><td>189</td><td>Feature guides drive meaningful traffic</td></tr>
+    <tr><td>/explorer (Daydream Explorer feature)</td><td>87</td><td>85</td><td>Named features get their own keyword clusters</td></tr>
+  </tbody></table></div>
+</div>
+
+<div id="page-ppath" class="pg">
+  <div class="ph"><div class="ph-eye">Competitor Deep Dive</div><h2>pointspath.com — The Chrome Extension Distribution Moat</h2><p>DA 31 · 579 referring domains · 2,734 backlinks · ~5,730 monthly visits</p></div>
+  <div class="al al-b"><div class="al-t">Strategy: Chrome extension that sits inside Google Flights — intercepts users at peak booking intent</div><p>pointspath.com is a Chrome browser extension that overlays points pricing directly onto Google Flights search results in real-time. Users see miles costs alongside cash prices for every flight result without leaving Google Flights. This distribution strategy intercepts users at the exact moment of flight shopping intent — before they even think to search for an award tool. Once installed, it creates a permanent passive touchpoint with every Google Flights search. ThriftTraveler.com calls it "the easiest tool for beginners." It gets mentioned in every award tools roundup, which built DA 31 and 579 referring domains primarily from press coverage alone.</p></div>
+  <div class="tw"><table><thead><tr><th>Page / Keyword</th><th>Keywords</th><th>Traffic/mo</th><th>Lesson</th></tr></thead><tbody>
+    <tr><td>Homepage · points path brand #1 · google flight #36</td><td>1,150</td><td>5,530</td><td>Chrome extension gets mentioned in every tools roundup</td></tr>
+    <tr><td>/blog/how-to-negotiate-on-airbnb (adjacent content)</td><td>25</td><td>45</td><td>Adjacent topics can drive traffic with low competition</td></tr>
+    <tr><td>/blog/bilt-rewards-rent-day-promotion</td><td>12</td><td>23</td><td>Timely points content drives seasonal traffic</td></tr>
+    <tr><td>/blog/buy-hilton-points-worth-it</td><td>35</td><td>14</td><td>Points value questions are searchable</td></tr>
+  </tbody></table></div>
+  <div class="al al-g"><div class="al-t">Build a FlightPoints Chrome extension — this is the highest-leverage product distribution play available</div><p>A FlightPoints Chrome extension showing miles availability and costs within Google Flights would: (1) get mentioned in every "best award travel tools" article — dramatically accelerating link acquisition, (2) intercept users at peak intent — the moment they're already shopping for flights, (3) create a passive distribution channel that no SEO strategy can replicate. Development estimate: 6–8 weeks. Long-term impact: equivalent to having a permanent top-3 listing on every Google Flights search page.</p></div>
+</div>
+
+<!-- ══ GROWTH OPPORTUNITIES ══ -->
+<div id="page-growth" class="pg">
+  <div class="ph"><div class="ph-eye">Growth Strategy</div><h2>Growth Opportunities — What Works &amp; How to Implement It</h2><p>Every growth lever, ordered by traffic impact. What each competitor is doing, whether it works, and exactly how to implement it for FlightPoints.</p></div>
+
+  <div class="sh"><h3>Tier 1 — Immediate Wins (Days 1–14)</h3></div>
+  <div class="il">
+    <div class="ii sp"><div><div class="ii-name">Add 200 words of server-rendered content to every /explore/[airline] page</div><div class="ii-desc">seats.aero's /anaf (ANA) page ranks for 707 keywords with minimal content. Their /aeroplan ranks for 224 keywords. These programme-specific pages work because they have dedicated URLs with the airline name + "award" context. FlightPoints already has these URLs — they just need text content that Google can read. One template, deployed across 25 pages in 2–3 days. Immediately unlocks programme-specific search traffic.</div><div class="ii-fix">→ Build the template. Include: programme intro, point costs by cabin, transfer partners, booking tips, 3-question FAQ with schema. Deploy to all /explore/[airline] pages.</div></div><span class="tg tg-g">Do This Week</span></div>
+    <div class="ii sp"><div><div class="ii-name">Build a promo/deals page — earns links from deal aggregators and converts well</div><div class="ii-desc">seats.aero's /friday page drives 479 visits/month from "seats.aero promo code" (3,600/mo) — their 5th highest-traffic page. Deal and coupon content is highly linkable from personal finance blogs and deal aggregator sites. Build: /free or /deals — "FlightPoints Free — Search Award Flights with No Account." Add "today's best award availability" section updated daily. Highly shareable and earns links passively over time.</div><div class="ii-fix">→ Build this page in 1 day. Submit to deal sites (RetailMeNot, CouponFollow). Mention in all outreach emails as a free access point.</div></div><span class="tg tg-g">This Week</span></div>
+  </div>
+
+  <div class="sh"><h3>Tier 2 — High-Impact Content (Month 1–2)</h3></div>
+  <div class="il">
+    <div class="ii sp"><div><div class="ii-name">Transfer bonus tracker — the #1 content play in this entire space</div><div class="ii-desc">roame's /guides/points-transfer-bonuses: 1,649 keywords, 1,490 visits/month. pointsyeah's transfer bonus post: 340 keywords, 510 visits/month. awardtravelfinder: multiple bonus pages totalling 400+ visits/month. point.me: 357 keywords, 850 visits/month. The combined lesson: this single content type outperforms everything else in this space. Build it first. Targets: "amex transfer bonus" (5,400/mo, $10 CPC), "chase transfer bonus" (5,400/mo, $1.96 CPC), "credit card transfer bonuses" (2,400/mo, $7 CPC), "capital one transfer bonus" (1,900/mo, $4.39 CPC).</div><div class="ii-fix">→ Build /transfer-bonuses covering all 6 major programmes. Add email opt-in for bonus alerts. Update weekly. Expected: 1,000–3,000 visits/month within 6 months.</div></div><span class="tg tg-g">Month 1</span></div>
+    <div class="ii sp"><div><div class="ii-name">13 points value pages — awardtravelfinder's #1 traffic category</div><div class="ii-desc">awardtravelfinder's top 6 traffic pages are all points value pages. /marriott-point-values: 343 keywords, 560 visits. /chase-points-value: 242 keywords, 308 visits. /hilton-point-values: 91 keywords, 170 visits. point.me's /insights/how-much-are-american-airlines-miles-worth/: 887 keywords, 1,039 visits. The keyword depth per page is enormous — "marriott bonvoy points value", "how much is a marriott point worth", "marriott points to dollars", "marriott points value calculator" all target the same page. 13 programmes × average 200 visits = 2,600+ new monthly visits from one content category.</div><div class="ii-fix">→ Build one template. Deploy to 13 programme pages. Each includes: value in cents, best redemptions, worst redemptions, transfer partner list, and an interactive calculator widget.</div></div><span class="tg tg-g">Month 1</span></div>
+    <div class="ii sp"><div><div class="ii-name">Airline partner guides — point.me's most efficient content play</div><div class="ii-desc">point.me's /insights/air-france-klm-partner-airlines/ drives 1,223 visits/month from 249 keywords. /insights/united-airlines-partners/ drives 1,123 visits from 258 keywords. /insights/air-canada-partner-airlines/ drives 729 visits from 244 keywords. Each page covers: which airlines are in this carrier's partner network, how to transfer points to reach those airlines, and which credit card programmes can be used. This is higher-value than even the points value pages in terms of visits per page. FlightPoints has zero pages in this category.</div><div class="ii-fix">→ Build airline partner guides for: Emirates, Qatar, Singapore, British Airways, ANA, JAL, Air France, United, American, Delta, Alaska. 11 pages × 500 avg visits = 5,500 new monthly visits.</div></div><span class="tg tg-g">Month 1–2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Transfer partner guides + credit card transfer guides — awardtravelfinder's #2 traffic category</div><div class="ii-desc">awardtravelfinder's /transfer-partners/alaska-airlines-mileage-plan drives 383 visits/month from 94 keywords. /transfer-partners/american-airlines-aadvantage drives 150 visits from 113 keywords. "Alaska transfer partners" (1,600/mo), "us bank transfer partners" (390/mo, $12.67 CPC), "wells fargo transfer partners" (1,900/mo, $6.17 CPC), "amex airline partners" (4,400/mo, $3.20 CPC) — all unranked for FlightPoints. Two page types needed: (1) /transfer-partners/[airline] — which cards transfer to this airline, (2) /credit-card-transfers/[card] — which airlines this card transfers to. Combined: 45 pages, each 50–400 keywords.</div><div class="ii-fix">→ Build 45 pages across both templates. Priority: Alaska, AA, United, BA Avios, Amex MR, Chase UR, Citi TYP pages first — highest search volume.</div></div><span class="tg tg-g">Month 1–2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Card comparison pages — awardtravelfinder's highest-CPC traffic category</div><div class="ii-desc">awardtravelfinder's /card-comparisons/amex-platinum-vs-chase-sapphire-reserve drives 190 visits/month from 68 keywords. Keyword: "amex platinum vs chase sapphire reserve" has 8,100 monthly searches at $18.40 CPC — one of the highest commercial-intent keywords in this entire space. /amex-gold-vs-chase-sapphire-preferred drives 154 visits. These pages attract affiliate programme interest, earn links from personal finance publications, and convert users already in decision mode. Top comparisons to build: Amex Plat vs CSR, Amex Gold vs CSP, Chase Sapphire Preferred vs Reserve, Amex vs Chase (hub page), Capital One Venture X vs CSR.</div><div class="ii-fix">→ Build 10 comparison pages. Each: intro → comparison table → section per card → winner by use case. Target: positions 5–10 for each pair query within 90 days.</div></div><span class="tg tg-g">Month 1–2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Competitor comparison pages — intercept evaluation-stage users at peak conversion intent</div><div class="ii-desc">awardtravelfinder's /compare section has head-to-head pages against every competitor. /compare/award-hacker ranks #7 for "awardhacker" (1,900/mo). roame's /guides/roame-vs-seats-aero ranks #1 for "roame vs seats.aero". These pages convert at 3–5× the rate of general content because the user is already in evaluation mode. Build: "FlightPoints vs Roame", "FlightPoints vs Seats.aero", "FlightPoints vs Point.me", "FlightPoints vs AwardTool", "Best Award Flight Search Tools 2026" (mega comparison). Each page targets competitor brand keyword variants.</div><div class="ii-fix">→ Build 6 comparison pages + 1 mega comparison. Feature FlightPoints strengths: real-time availability, UI simplicity, free access. Target: positions 1–5 for "[competitor] alternative" queries.</div></div><span class="tg tg-g">Month 2</span></div>
+  </div>
+
+  <div class="sh"><h3>Tier 3 — Large-Scale &amp; Long-Term Plays (Month 2–6)</h3></div>
+  <div class="il">
+    <div class="ii sp"><div><div class="ii-name">300+ route pages — the single largest traffic opportunity available</div><div class="ii-desc">awardtravelfinder ranks #3 for "cheapest reward flights europe to SFO" (390/mo) from /routes/paris-to-san-francisco. They have confirmed pages for JFK-NRT, LAX-SYD, Paris-Lisbon, LHR-JFK, SYD-LAX, LHR-SIN, JFK-DOH, SFO-NRT. These route pages target booking-intent queries — the highest-converting traffic type. FlightPoints natural advantage: real-time award availability data vs awardtravelfinder's static pricing estimates. A route page showing actual available award seats for JFK→NRT is dramatically more useful and linkable. Build 300 pages via template in 60 days. Conservative: 300 × 50 visits = 15,000 new monthly visits. Optimistic: 300 × 200 visits = 60,000 new monthly visits.</div><div class="ii-fix">→ Build the template. Populate from product database. Priority routes: JFK-LHR, JFK-NRT, LAX-SYD, SFO-SIN, ORD-LHR, MIA-GRU, JFK-DXB, JFK-CDG, LAX-HKG. Launch 50 routes/week for 6 weeks.</div></div><span class="tg tg-g">Month 2–3</span></div>
+    <div class="ii sp"><div><div class="ii-name">Interactive points value calculator — 406 keywords from 1 page (seats.aero model)</div><div class="ii-desc">seats.aero's /tools/calculator drives 1,077 visits/month from 406 keywords. awardtravelfinder's calculator drives 147 visits from 167 keywords. Keywords targeted: "points calculator" (2,400/mo), "points vs cash calculator" (1,000/mo, $5.17 CPC), "chase points value calculator" (880/mo, $13.25 CPC), "hilton points calculator" (720/mo). Build a more comprehensive calculator: input points programme + points balance → output dollar value + best current redemptions for that balance + comparison of what you could get with each programme. Extend to: "Is this redemption worth it?" (route + cost in points → cents per point + verdict).</div><div class="ii-fix">→ Build as an interactive React/JS component on /points-calculator. Expected: 3,000–8,000 visits/month within 12 months. Highly linkable — bloggers reference calculator tools constantly.</div></div><span class="tg tg-g">Month 2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Chrome extension overlaying miles in Google Flights — pointspath's distribution moat</div><div class="ii-desc">pointspath built DA 31 and 579 referring domains primarily through a Chrome extension that overlays points prices in Google Flights. ThriftTraveler.com calls it "the easiest tool for beginners." It's mentioned in every award travel tools roundup. A FlightPoints Chrome extension showing: (1) award seat availability badge on each Google Flights result, (2) lowest points cost across 3–5 programmes, (3) one-click "Search in FlightPoints" button — would intercept users at the highest possible purchase intent and get mentioned in every future tools roundup, dramatically accelerating link acquisition. Development: 6–8 weeks. Impact: permanent passive distribution channel.</div><div class="ii-fix">→ Build and launch on Chrome Web Store. Submit to all award travel bloggers and tools roundups immediately on launch. Estimated: 10,000+ installs in year one.</div></div><span class="tg tg-g">Month 2–3</span></div>
+    <div class="ii sp"><div><div class="ii-name">Finnish market expansion — 27,100/month keyword already ranking #27 with zero investment</div><div class="ii-desc">The Finnish page /fi/explore/emirates/ ranks #27 for "flyselskab emirates" (27,100 monthly searches) — the site's highest-volume keyword achieved with essentially no content investment. This proves the international model works. Finnish award travel has near-zero local competition. Build: 5 Finnish-language content pages (transfer bonuses, programme guides, booking basics), Finnish hreflang implemented correctly, Finnish-language versions of top airline pages. Similar opportunity in Hebrew (Israeli credit card users) and the Spanish-speaking Latin American market.</div><div class="ii-fix">→ Correct hreflang first. Then build 5 Finnish content pages. Target: 5,000+ Finnish monthly visits within 6 months at near-zero competitive cost.</div></div><span class="tg tg-g">Month 1–2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Lounge reviews — roame's link acquisition flywheel</div><div class="ii-desc">roame's /guides/greenwich-lounge-jfk-review drives 418 visits/month from "greenwich lounge jfk" (1,000/mo, #2). Club LAS lounge: 238 visits. Alaska SFO lounge: 141 visits. SkyTeam lounge HND: 88 visits. Every lounge review earns organic links from travel forums, personal travel blogs, and Reddit. These links flow authority to the entire domain. 6 detailed lounge reviews at major US international gateways (JFK, LAX, SFO, ORD, MIA, EWR) with original photos, wifi test results, and food/drink scores would collectively drive 1,500–3,000 monthly visits and 6–10 editorial links within 90 days of publication.</div><div class="ii-fix">→ Commission 6 lounge visits and reviews. Publish with structured data (review schema, photos, ratings). Submit to lounge communities and travel subreddits.</div></div><span class="tg tg-g">Month 3–4</span></div>
+    <div class="ii sp"><div><div class="ii-name">Credit card issuer partnership — point.me's 29,000 visit/month single-page model</div><div class="ii-desc">point.me's Amex partnership page drives 29,235 visits/month from a single co-branded page. This is more traffic than most competitor sites generate in total. The lesson: a single partnership with a major credit card issuer can transform traffic overnight. Target: Chase (Chase UR + FlightPoints), Citi (Citi TYP + FlightPoints), or Capital One (C1 Miles + FlightPoints). Pitch: "Co-branded award flight search for your cardholders." Page ranks for all "[programme] award flights" and "[programme] partner airlines" keywords. Revenue model: revenue share on card applications or fixed partnership fee.</div><div class="ii-fix">→ Approach 3 card issuers with a proposal deck. Timeline: 2–6 months to close. Single deal could 2–3× total site traffic permanently.</div></div><span class="tg tg-g">Month 3–6</span></div>
+  </div>
+</div>
+
+<!-- ══ CONTENT PLAYBOOK ══ -->
+<div id="page-content2" class="pg">
+  <div class="ph"><div class="ph-eye">Full Content Playbook</div><h2>Content Playbook — Every Type to Build, at Scale</h2><p>What to build, how many pages, the template structure, and the traffic potential for each content category.</p></div>
+
+  <div class="al al-p"><div class="al-t">The core principle: one dedicated page per keyword cluster, replicated systematically</div><p>awardtravelfinder built ~4,770 monthly visits at DA 21 by creating one perfectly structured page per keyword cluster. With higher authority, this strategy delivers 5–10× more results. The key insight: each content category uses one template. Building the template takes time. Deploying it to 20 pages takes no additional creative effort. This is content at scale — not one-off blog posts.</p></div>
+
+  <div class="sh"><h3>Content Category Master Plan</h3></div>
+  <div class="tw"><table><thead><tr><th>Content Type</th><th>URL Pattern</th><th>Pages to Build</th><th>Effort</th><th>Traffic Potential</th><th>Priority</th></tr></thead><tbody>
+    <tr><td><strong>Transfer bonus tracker</strong></td><td>/transfer-bonuses</td><td>1 hub + 8 programme pages</td><td>1 template</td><td>1,500–5,000/mo</td><td><span class="tg tg-r">Build First</span></td></tr>
+    <tr><td><strong>Points value pages</strong></td><td>/[programme]-point-values</td><td>13</td><td>1 template</td><td>2,500–6,000/mo</td><td><span class="tg tg-r">Week 1</span></td></tr>
+    <tr><td><strong>Airline partner guides</strong></td><td>/airlines/[airline]/partners</td><td>15</td><td>1 template</td><td>3,000–8,000/mo</td><td><span class="tg tg-r">Week 2</span></td></tr>
+    <tr><td><strong>Transfer partner pages</strong></td><td>/transfer-partners/[airline]</td><td>25</td><td>1 template</td><td>2,000–5,000/mo</td><td><span class="tg tg-a">Month 1</span></td></tr>
+    <tr><td><strong>Credit card transfer guides</strong></td><td>/credit-card-transfers/[card]</td><td>20</td><td>1 template</td><td>2,000–4,000/mo</td><td><span class="tg tg-a">Month 1</span></td></tr>
+    <tr><td><strong>Card comparison pages</strong></td><td>/card-comparisons/[card-vs-card]</td><td>10</td><td>1 template</td><td>1,500–4,000/mo</td><td><span class="tg tg-a">Month 1</span></td></tr>
+    <tr><td><strong>Airline award guides</strong></td><td>/airlines/[airline]</td><td>20</td><td>1 template</td><td>3,000–8,000/mo</td><td><span class="tg tg-a">Month 2</span></td></tr>
+    <tr><td><strong>Competitor comparison pages</strong></td><td>/compare/[competitor]</td><td>8</td><td>1 template</td><td>500–2,000/mo</td><td><span class="tg tg-a">Month 2</span></td></tr>
+    <tr><td><strong>Award chart pages</strong></td><td>/award-charts/[airline]</td><td>12</td><td>1 template</td><td>1,000–3,000/mo</td><td><span class="tg tg-b">Month 2</span></td></tr>
+    <tr><td><strong>Route pages (programmatic)</strong></td><td>/routes/[city-to-city]</td><td>300–500</td><td>1 template</td><td>15,000–60,000/mo</td><td><span class="tg tg-b">Month 2</span></td></tr>
+    <tr><td><strong>Points value calculator</strong></td><td>/points-calculator</td><td>1</td><td>Dev work</td><td>3,000–8,000/mo</td><td><span class="tg tg-b">Month 2</span></td></tr>
+    <tr><td><strong>Lounge reviews</strong></td><td>/lounges/[lounge-name]</td><td>10</td><td>Requires visits</td><td>1,000–3,000/mo</td><td><span class="tg tg-g">Month 3</span></td></tr>
+    <tr><td><strong>Finnish locale pages</strong></td><td>/fi/[content]</td><td>10–20</td><td>Translation</td><td>3,000–10,000/mo</td><td><span class="tg tg-g">Month 1–2</span></td></tr>
+    <tr><td><strong>First class reviews</strong></td><td>/reviews/[airline-cabin]</td><td>8</td><td>Requires travel</td><td>800–2,000/mo</td><td><span class="tg tg-g">Month 4</span></td></tr>
+  </tbody></table></div>
+
+  <div class="sh"><h3>Blog Post Expansion — Every Existing Post</h3></div>
+  <div class="tw"><table><thead><tr><th>Post</th><th>Action Required</th><th>Current Pos.</th><th>Target Pos.</th><th>Time</th></tr></thead><tbody>
+    <tr><td>/blogs/award-search-tool/</td><td>Complete rewrite as 8-tool comparison · 3,000 words · FAQPage schema · 3–5 backlinks</td><td>#78–97</td><td>#5–15</td><td>3 days</td></tr>
+    <tr><td>/blogs/step-by-step-guide/</td><td>Expand to 3,000 words · H2 restructure · FAQ schema · internal CTAs to /explore</td><td>#32–70</td><td>#10–25</td><td>2 days</td></tr>
+    <tr><td>/blogs/airline-alliances-explained/</td><td>Add alliance member tables · comparison chart · 2–3 targeted backlinks to this URL</td><td>#32–57</td><td>#10–20</td><td>1.5 days</td></tr>
+    <tr><td>/blogs/how-airline-award-availability-really-works/</td><td>Maintain · add FAQ schema · use as structure template for all other posts</td><td>#9–14</td><td>Top 5</td><td>0.5 days</td></tr>
+    <tr><td>/blogs/top-10-ways-to-earn-miles/</td><td>Expand to 2,500 words · add credit card section · FAQ schema · internal links</td><td>#45–69</td><td>#15–30</td><td>1.5 days</td></tr>
+  </tbody></table></div>
+
+  <div class="sh"><h3>Content Quality Standards — Every Page Must Have</h3></div>
+  <div class="al al-b"><div class="al-t">Non-negotiable quality checklist for every piece of content published</div><ul>
+    <li><strong>Author attribution:</strong> Named author with bio, travel credentials, LinkedIn/Twitter link, photo</li>
+    <li><strong>Publication date + last updated date:</strong> Visible on every page</li>
+    <li><strong>Target keyword in H1:</strong> Exact phrase or close semantic variant, within first 60 characters</li>
+    <li><strong>H2 structure targeting PAA questions:</strong> 4–6 H2s formatted as questions Google shows in People Also Ask for the target keyword</li>
+    <li><strong>FAQPage schema:</strong> Minimum 4 Q&amp;A pairs per post, answering 4 different search intent questions</li>
+    <li><strong>Internal links to the tool:</strong> 2–3 contextual links per post with keyword-rich anchor text pointing to /explore or specific airline pages</li>
+    <li><strong>Word count:</strong> Minimum 2,000 words for blog posts. Points value pages: 800–1,200 words. Transfer partner pages: 600–1,000 words.</li>
+    <li><strong>Original data or screenshots:</strong> At least one original screenshot of FlightPoints search results per page — demonstrates E-E-A-T and differentiates from AI-generated content</li>
+    <li><strong>Last updated within 12 months:</strong> Google deprioritises stale content in YMYL categories</li>
+    <li><strong>Mobile-optimised formatting:</strong> Short paragraphs, bullet lists, tables — 60%+ of award travel searches are on mobile</li>
+  </ul></div>
+</div>
+
+<!-- ══ LINK BUILDING PLAN ══ -->
+<div id="page-links" class="pg">
+  <div class="ph"><div class="ph-eye">Link Building Strategy</div><h2>Link Building Plan — From 79 to 500+ Quality Domains</h2><p>Every link acquisition method, prioritised by speed and quality. The target is 5 quality links (DA 30+) per month minimum.</p></div>
+
+  <div class="sh"><h3>Month 1 — Foundation Outreach (5 links minimum)</h3></div>
+  <div class="il">
+    <div class="ii sp"><div><div class="ii-name">Press outreach — pitch to ThriftTraveler, FrequentMiler, MileValue</div><div class="ii-desc">Send a 3-sentence pitch email to the editor or relevant writer at each publication. Offer: (1) a guest post on "how to search for award flights effectively" (800–1,200 words, original research), or (2) tool inclusion in their existing "best award search tools" roundup article. FrequentMiler.com explicitly features new award tools. ThriftTraveler features pointspath and roame. A tool mention in either generates DA 60+ editorial links that compound authority for years. Do not ask for a link — offer value first.</div><div class="ii-fix">→ Send 3 personalised pitch emails this week. Follow up in 7 days. Track in a spreadsheet.</div></div><span class="tg tg-r">Week 1</span></div>
+    <div class="ii sp"><div><div class="ii-name">Reddit presence — r/awardtravel and r/churning tool recommendation threads</div><div class="ii-desc">Reddit ranks on page one for nearly every award travel search term. r/awardtravel has a wiki of recommended tools. r/churning discusses award search tools frequently. Strategy: (1) Create an account, spend 2 weeks genuinely answering questions with no promotion. (2) When asked "what award search tool do you use?" — mention FlightPoints naturally. (3) Get mentioned in 2–3 tool recommendation threads. (4) Request wiki inclusion after 30 days of positive contributions. A single Reddit recommendation can drive 500–5,000 high-intent users in a week. Reddit links also pass some PageRank signal.</div><div class="ii-fix">→ Join r/awardtravel and r/churning this week. Answer 5 questions genuinely before mentioning FlightPoints.</div></div><span class="tg tg-r">Week 1–4</span></div>
+    <div class="ii sp"><div><div class="ii-name">Tool review pages — create a "FlightPoints Review" page optimised for brand + review keywords</div><div class="ii-desc">Build a comprehensive self-hosted review page at /reviews or /about/flightpoints-review. Include: how the tool works, screenshots, comparison table vs competitors, user testimonials, pricing transparency. This page captures "flightpoints review" searches as brand grows, and it's the first result new users check before signing up. It also gives bloggers and journalists a page to link to when they mention the tool. Optimize for: "flightpoints review", "flightpoints.com review", "is flightpoints legit".</div><div class="ii-fix">→ Build this page in 2 days. Submit it to Trustpilot and G2 Crowd for additional review signals.</div></div><span class="tg tg-a">Month 1</span></div>
+  </div>
+
+  <div class="sh"><h3>Months 2–6 — Scale (50+ quality domains)</h3></div>
+  <div class="il">
+    <div class="ii sp"><div><div class="ii-name">Transfer bonus tracker as a link magnet — bloggers reference it constantly</div><div class="ii-desc">Once built, the /transfer-bonuses page becomes inherently linkable. Every time a travel blogger writes about transfer bonuses, they link to the most comprehensive tracker they can find. Email 20 miles and points bloggers when the page launches: "We just built a comprehensive transfer bonus tracker — thought you might want to reference it in your transfer bonus articles." This one email sequence can earn 10–15 links within 30 days of page launch. Update the page weekly to maintain its "freshest and most comprehensive" status.</div><div class="ii-fix">→ Launch the tracker. Email 20 bloggers on launch day. Create a weekly update email for bloggers who want to be notified of new bonuses.</div></div><span class="tg tg-g">Month 2</span></div>
+    <div class="ii sp"><div><div class="ii-name">Route pages as a data resource — pitch to destination and travel bloggers</div><div class="ii-desc">Once the route pages are built, pitch them as a reference resource to travel bloggers writing about specific destinations. "Writing about Tokyo? Here's our page showing exactly how many miles it takes to fly from New York to Tokyo across every loyalty programme." This contextual pitch converts at 15–25% compared to generic link requests converting at 1–3%. 300 route pages × 1 link each = 300 additional referring domains over 12 months. Each is highly relevant and editorial.</div><div class="ii-fix">→ Build the route pages first. Then systematically pitch to travel bloggers covering each destination.</div></div><span class="tg tg-g">Month 3</span></div>
+    <div class="ii sp"><div><div class="ii-name">Digital PR — publish original data on award flight pricing trends</div><div class="ii-desc">FlightPoints has real-time award availability data that no one else has. Publish quarterly reports: "The cheapest business class award flights in Q1 2026 — which routes and programmes offer the best value." Send to: travel journalists at major publications, travel bloggers, points and miles newsletters. Original data gets cited. Citations become links. Travel data stories regularly earn coverage in mainstream outlets (Forbes Travel, Conde Nast Traveler, Business Insider Travel) at DA 80–90+. Even one placement in a major outlet is worth 50 directory links.</div><div class="ii-fix">→ Publish the first award pricing data report in Month 2. Send a press release to 30 travel journalists and bloggers simultaneously.</div></div><span class="tg tg-g">Month 2–3</span></div>
+    <div class="ii sp"><div><div class="ii-name">Guest posting on miles and points blogs — 2 posts per month minimum</div><div class="ii-desc">Target: 2 guest posts per month on sites with DA 30–60. Topics: "How to find award availability in 2026", "The hidden value in Turkish Miles: why it's underrated", "A complete guide to partner awards". Each guest post: (1) earns a contextual editorial link from a relevant site, (2) introduces FlightPoints to a new engaged audience, (3) builds topical authority in the award travel space. Track all guest post opportunities in a spreadsheet. Aim for 24 guest posts in year one = 24+ high-quality referring domains.</div><div class="ii-fix">→ Identify 30 blogs accepting guest posts. Pitch 5 per week until 2 per month are confirmed. Never miss a deadline — reputation is the currency of guest posting.</div></div><span class="tg tg-g">Month 1–12</span></div>
+  </div>
+</div>
+
+<!-- ══ GRANULAR TASK PLAN ══ -->
+<div id="page-tasks" class="pg">
+  <div class="ph"><div class="ph-eye">Execution Plan</div><h2>Granular Task Plan — Every Action, Week by Week</h2><p>24 specific tasks from Day 1 to Month 6. Each is at the execution level — specific enough to start immediately without further planning.</p></div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Day 1</div><div class="step-ti">Three urgent fixes — do these before anything else</div></div>
+    <div class="task"><div class="tn tn-r">1</div><div><div class="t-title">Create and submit Google Search Console disavow file</div><div class="t-desc">Go to GSC → Settings → Disavow links. Create a text file with "domain:takes.sbs", "domain:wants.cfd", "domain:blinks.sbs", "domain:knows.sbs", "domain:knows.monster", "domain:seol.store", "domain:australianwebdirectory.shop", "domain:bestwebstats.com" (one per line). Upload. This removes active spam penalty risk. Takes 2 hours total.</div><div class="t-meta"><span class="tm-tag tg-r">Day 1</span><span class="tm-tag tg-gr">2 hours</span><span class="tm-tag tg-g">Removes penalty risk</span></div></div></div>
+    <div class="task"><div class="tn tn-r">2</div><div><div class="t-title">Implement 301 redirect: non-www → www</div><div class="t-desc">Add redirect rule to server config (Apache: "RewriteRule ^(.*)$ https://www.flightpoints.com/$1 [R=301,L]") or Nginx equivalent. Set preferred domain in GSC under Settings → Search Console Preferences. Update all internal links found in source code to use www. Confirm redirect is working with redirectcheck.com.</div><div class="t-meta"><span class="tm-tag tg-r">Day 1</span><span class="tm-tag tg-gr">2 hours dev</span><span class="tm-tag tg-g">Consolidates link equity</span></div></div></div>
+    <div class="task"><div class="tn tn-r">3</div><div><div class="t-title">Rewrite meta title tags — every page in the site</div><div class="t-desc">Homepage: "Award Flight Search Tool — Find Flights with Miles &amp; Points | FlightPoints". /explore: "Search Award Flights with Points — All Airlines | FlightPoints". Each /explore/[airline]: "[Airline] Award Flights — Search with Miles &amp; Points | FlightPoints". Each blog post: "[Primary keyword]: [Benefit] — FlightPoints Guide 2026". Update in CMS or directly in HTML. Max 62 characters. Keyword in first 40 characters.</div><div class="t-meta"><span class="tm-tag tg-r">Day 1</span><span class="tm-tag tg-gr">1 day</span><span class="tm-tag tg-g">Immediate CTR improvement</span></div></div></div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Days 2–5</div><div class="step-ti">Schema, content stubs, and international fix</div></div>
+    <div class="task"><div class="tn tn-r">4</div><div><div class="t-title">Implement JSON-LD schema on all page types</div><div class="t-desc">Build 4 schema templates: (1) Organization + WebSite for homepage. (2) BreadcrumbList for all pages. (3) WebApplication + SoftwareApplication for /explore and /explore/[airline]. (4) Article + FAQPage for all blog posts. Add to &lt;head&gt; via template includes or CMS plugin. Validate each page type with Google Rich Results Test. Estimated 3–4 days of development. Priority order: Organization → BreadcrumbList → WebApplication → Article + FAQ.</div><div class="t-meta"><span class="tm-tag tg-r">Days 2–5</span><span class="tm-tag tg-gr">3–4 days dev</span><span class="tm-tag tg-g">Enables rich results + AI Overviews</span></div></div></div>
+    <div class="task"><div class="tn tn-a">5</div><div><div class="t-title">Add 200-word content stub to every /explore/[airline] page</div><div class="t-desc">Write one master template. Variables: [Airline name], [Programme name], [Economy points range], [Business points range], [First class points range], [Transfer partners list], [Best redemption], [FAQ-1 question + answer], [FAQ-2 question + answer], [FAQ-3 question + answer]. Deploy to all 25 programme pages. Add FAQPage schema to each. This makes 25 currently-invisible pages indexable for airline + award keyword combinations overnight.</div><div class="t-meta"><span class="tm-tag tg-r">Days 3–5</span><span class="tm-tag tg-gr">2–3 days</span><span class="tm-tag tg-g">25 pages immediately indexable</span></div></div></div>
+    <div class="task"><div class="tn tn-a">6</div><div><div class="t-title">Implement complete hreflang for Finnish, Hebrew, Spanish, Tagalog</div><div class="t-desc">Add to every page's &lt;head&gt;: hreflang tags for en (x-default), fi-FI, he-IL, es, es-MX, tl-PH. Each tag references all other locale versions of the same page. Add all locale variant URLs to XML sitemap. Submit updated sitemap to GSC. Validate with Google Search Console International Targeting report. Also check that locale pages are not accidentally blocked by robots.txt.</div><div class="t-meta"><span class="tm-tag tg-a">Days 4–5</span><span class="tm-tag tg-gr">1–2 days dev</span><span class="tm-tag tg-g">Removes duplicate content risk + unlocks Finnish traffic</span></div></div></div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Week 1</div><div class="step-ti">First content category — transfer bonus tracker + rewrite top blog post</div></div>
+    <div class="task"><div class="tn tn-a">7</div><div><div class="t-title">Build the transfer bonus tracker at /transfer-bonuses</div><div class="t-desc">Structure: (1) Hero section — "All Current Credit Card Transfer Bonuses — Updated Weekly." (2) Summary table: Programme | Airline Partner | Bonus % | Valid Until | Typical Min Transfer. (3) Individual programme sections: Amex MR, Chase UR, Citi TYP, Capital One, Bilt, Marriott Bonvoy — each with current bonus, historical bonus list, how to maximise it, link to FlightPoints search for that programme's airlines. (4) Email opt-in: "Get notified of new transfer bonuses." (5) FAQPage schema with 5 questions. Update weekly every Monday. Submit to FrequentMiler.com, The Points Guy, and Miles to Memories for potential coverage.</div><div class="t-meta"><span class="tm-tag tg-a">Week 1</span><span class="tm-tag tg-gr">3 days</span><span class="tm-tag tg-g">Target: 1,000–3,000 visits/month in 6 months</span></div></div></div>
+    <div class="task"><div class="tn tn-a">8</div><div><div class="t-title">Complete rewrite of /blogs/award-search-tool/ as the definitive tool comparison</div><div class="t-desc">Target keyword: "best award flight search tools 2026" and "award flight search tool". Structure: (1) Intro: why tool choice matters for award travel. (2) Quick comparison table: Tool | Price | Airlines | Unique Feature | Best For. (3) Individual tool sections (300 words each): awardtravelfinder, seats.aero, roame, point.me, awardtool, pointhound, pointsyeah, pointspath, FlightPoints (featured first or most prominently). (4) "Best for specific use cases" section. (5) FAQPage schema. 3,000+ words. Add Article schema with author credentials. Build 3–5 backlinks to this specific URL from related posts and outreach. Target: positions 5–15 within 60 days.</div><div class="t-meta"><span class="tm-tag tg-a">Week 1</span><span class="tm-tag tg-gr">3 days</span><span class="tm-tag tg-g">Most commercially important page</span></div></div></div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Weeks 2–4</div><div class="step-ti">Points value pages + link building begins + core product landing pages</div></div>
+    <div class="task"><div class="tn tn-a">9</div><div><div class="t-title">Build all 13 points value pages</div><div class="t-desc">One template with variables: [Programme name], [Current value range in cents], [Best redemptions list], [Worst redemptions list], [Transfer partner cards list], [Best credit card for this programme], [Points value calculator widget for this programme], [FAQ — 5 questions]. Programmes: Amex MR, Chase UR, Citi TYP, Capital One Miles, Bilt Rewards, United MileagePlus, Delta SkyMiles, AA AAdvantage, Marriott Bonvoy, Hilton Honors, Hyatt, IHG, Southwest Rapid Rewards. Publish all 13 within 2 weeks. Add Article + FAQPage schema to each. Internal link from each page to relevant FlightPoints search results.</div><div class="t-meta"><span class="tm-tag tg-a">Weeks 2–3</span><span class="tm-tag tg-gr">2 weeks</span><span class="tm-tag tg-g">Target: 2,500–5,000 visits/month</span></div></div></div>
+    <div class="task"><div class="tn tn-a">10</div><div><div class="t-title">Build 3 dedicated product landing pages for core tool keywords</div><div class="t-desc">(1) /award-flight-search — 1,200 words. Target: "award flight search tool" (1,900/mo), "award flight search" (1,900/mo). Include: how FlightPoints works, supported airlines, how it compares to manual searching, comparison table vs 3 alternatives, FAQ schema. (2) /search-flights-with-points — Target: "search flights with points" (140/mo), "flights with points search" (70/mo). (3) /award-travel-search — Target: "award travel search" (480/mo), "award travel search engine". Build 3–5 backlinks to each URL specifically. These pages exist because the homepage cannot rank for all three simultaneously.</div><div class="t-meta"><span class="tm-tag tg-a">Week 3</span><span class="tm-tag tg-gr">1 week</span><span class="tm-tag tg-g">Core product keyword rankings</span></div></div></div>
+    <div class="task"><div class="tn tn-a">11</div><div><div class="t-title">Start editorial link building outreach — target 5 quality links in 30 days</div><div class="t-desc">Week 1: Research 20 target publications and their relevant writers. Find the "best award search tools" articles on each site. Week 2: Send personalised 3-sentence pitch emails to each writer (not the generic contact form). Offer either: (a) inclusion of FlightPoints in their existing tool roundup, or (b) a guest post draft on a topic relevant to their audience. Week 3: Follow up once with any non-responders. Week 4: Pitch 10 more publications. Track all outreach in a spreadsheet: date sent, contact, publication, DA, response, outcome.</div><div class="t-meta"><span class="tm-tag tg-a">Month 1</span><span class="tm-tag tg-gr">Ongoing</span><span class="tm-tag tg-g">Foundation of all authority growth</span></div></div></div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Month 2</div><div class="step-ti">Transfer partner pages + card comparisons + competitor comparisons</div></div>
+    <div class="task"><div class="tn tn-b">12</div><div><div class="t-title">Build 25 transfer partner pages + 20 credit card transfer pages</div><div class="t-desc">Transfer partner pages (/transfer-partners/[airline]): Which cards transfer to this airline, transfer ratios, transfer time, bonus history, step-by-step how to transfer, link to FlightPoints search for this airline. Priority: Alaska Mileage Plan (1,600/mo), AA AAdvantage, British Airways Avios, Aeroplan, Singapore KrisFlyer, Emirates Skywards. Credit card transfer pages (/credit-card-transfers/[card]): All airlines this card transfers to, transfer ratios, best transfer for each goal (business class, quick trip, hotel etc.), link to FlightPoints search for each partner. Priority: Amex MR, Chase UR, Citi TYP, Capital One, Bilt. 45 pages total, each targeting 50–400 keywords.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2</span><span class="tm-tag tg-gr">4 weeks</span><span class="tm-tag tg-g">Target: 4,000–10,000 visits/month</span></div></div></div>
+    <div class="task"><div class="tn tn-b">13</div><div><div class="t-title">Build 10 card comparison pages targeting the highest-CPC keywords in this space</div><div class="t-desc">Priority pages: (1) /card-comparisons/amex-platinum-vs-chase-sapphire-reserve (8,100/mo, $18.40 CPC). (2) /card-comparisons/amex-gold-vs-chase-sapphire-preferred (1,900/mo, $16 CPC). (3) /card-comparisons/chase-sapphire-preferred-vs-reserve. (4) /card-comparisons/capital-one-venture-x-vs-chase-sapphire-reserve. (5) /card-comparisons/amex-vs-chase-overview (hub page). Structure per page: intro → comparison table (rewards rate / travel benefits / annual fee / award travel value / verdict) → section per card → "best for" verdict → FAQ schema → CTA to use FlightPoints to search with this card's points.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2</span><span class="tm-tag tg-gr">2 weeks</span><span class="tm-tag tg-g">Target: 1,500–4,000 visits/month · Affiliate potential</span></div></div></div>
+    <div class="task"><div class="tn tn-b">14</div><div><div class="t-title">Build 8 competitor comparison pages + 1 mega comparison</div><div class="t-desc">Pages: "FlightPoints vs Roame", "FlightPoints vs Seats.aero", "FlightPoints vs Point.me", "FlightPoints vs AwardTool", "FlightPoints vs PointsYeah", "FlightPoints vs PointHound", "FlightPoints vs AwardHacker" (currently not in core list but has 1,900/mo searches), "Best Award Flight Search Tools 2026 — The Complete Comparison". Each comparison: feature table → detailed comparison per feature → who wins each category → overall verdict → CTA. Target: "[competitor] alternative", "[competitor] vs flightpoints" search queries that will grow as the brand grows. These convert at 3–5× the rate of general content.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2</span><span class="tm-tag tg-gr">2 weeks</span><span class="tm-tag tg-g">Highest conversion rate content type</span></div></div></div>
+  </div>
+
+  <div class="step-grp">
+    <div class="step-hd"><div class="step-wk">Months 2–3</div><div class="step-ti">Large-scale programmatic plays</div></div>
+    <div class="task"><div class="tn tn-b">15</div><div><div class="t-title">Build and launch 300+ route pages</div><div class="t-desc">Build the template with variables: [Route name], [Origin city + airport], [Destination city + airport], [Airlines serving route], [Loyalty programmes covering route], [Economy best value programme + points], [Business class best value programme + points], [First class best value programme + points], [Tips for this route], [FAQ-1 through FAQ-5]. Populate from product database. Priority routes (batch 1, 50 pages): JFK-LHR, JFK-NRT, LAX-SYD, SFO-SIN, ORD-LHR, MIA-GRU, JFK-DXB, JFK-CDG, LAX-HKG, JFK-HND, SFO-NRT, LAX-NRT, JFK-FCO, ORD-CDG, LAX-ICN. Launch 50 routes per week for 6 weeks = 300 route pages in 6 weeks. Include FAQPage schema on each, FlightPoints live search CTA, and real-time award availability indicator.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2–3</span><span class="tm-tag tg-gr">60 days</span><span class="tm-tag tg-g">Target: 15,000–60,000 visits/month at scale</span></div></div></div>
+    <div class="task"><div class="tn tn-b">16</div><div><div class="t-title">Launch the points value calculator at /points-calculator</div><div class="t-desc">Inputs: (1) Select programme. (2) Enter number of points. Outputs: (1) Dollar value at current average CPP for that programme. (2) Best redemption options for that points balance (economy to X, business to Y). (3) "Is this redemption worth it?" comparison — if user enters a specific route: show CPP vs programme average, verdict (great value / average / poor value). Extend to a comparison mode: enter same points amount across 3 programmes to compare value. Include: live CPP data updated monthly, source citation for CPP data, CTA to search with these points in FlightPoints.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2</span><span class="tm-tag tg-gr">3–4 weeks dev</span><span class="tm-tag tg-g">Target: 3,000–8,000 visits/month from 400+ keywords</span></div></div></div>
+    <div class="task"><div class="tn tn-b">17</div><div><div class="t-title">Begin development of Chrome extension</div><div class="t-desc">Minimum viable extension: (1) Detect Google Flights search results page. (2) For each flight result, show a badge: "Award seats available via [X programmes]" or "No award availability." (3) On click: open FlightPoints search for that route and date. (4) Settings: choose which loyalty programmes to show (personalisation). Chrome Web Store listing: name "FlightPoints — Miles &amp; Award Search", category: Travel, description targeting "award miles Google Flights" keywords. Submit to FlightTripperPro, FrequentMiler, and ThriftTraveler for reviews immediately on launch.</div><div class="t-meta"><span class="tm-tag tg-b">Month 2–3</span><span class="tm-tag tg-gr">6–8 weeks dev</span><span class="tm-tag tg-g">Durable distribution moat · Earns press mentions forever</span></div></div></div>
+    <div class="task"><div class="tn tn-g">18</div><div><div class="t-title">Build Finnish content and establish genuine presence in r/awardtravel</div><div class="t-desc">Finnish content: 5 pages in Finnish covering transfer bonuses, top programmes for Finnish routes (Finnair routes via OneWorld partners), and a "how to find award flights from Helsinki" guide. These pages have near-zero competition. Target: Helsinki to New York, Helsinki to Asia, Finland to Middle East. Community: Join r/awardtravel and r/churning. Answer 5 questions per week for 4 weeks with no promotion. After 30 days of genuine contributions, mention FlightPoints naturally when relevant and request wiki inclusion. Track: r/awardtravel wiki listing target within 60 days.</div><div class="t-meta"><span class="tm-tag tg-g">Month 3</span><span class="tm-tag tg-gr">Ongoing</span><span class="tm-tag tg-g">Finnish: 5,000+ visits/month · Community: brand awareness + links</span></div></div></div>
+  </div>
+
+  <div class="div"></div>
+  <div class="sh"><h3>12–18 Month Traffic Projection</h3></div>
+  <div class="tw"><table><thead><tr><th>Milestone</th><th>Content Added</th><th>Monthly Visits</th><th>Cumulative</th></tr></thead><tbody>
+    <tr class="hl-row"><td>Today (April 2026)</td><td>Current state</td><td>3</td><td>3</td></tr>
+    <tr><td>Month 1 — Schema + title tags + programme pages + transfer bonus tracker</td><td>25+ explore pages + tracker + 13 points value pages</td><td>+350</td><td>~353</td></tr>
+    <tr><td>Month 2 — Transfer partner pages + card comparisons + links</td><td>45 partner pages + 10 comparisons + 5+ editorial links</td><td>+1,500</td><td>~1,850</td></tr>
+    <tr><td>Month 3 — Route pages launch + competitor comparisons + DA growth</td><td>First 150 route pages + authority improvement</td><td>+3,000</td><td>~4,850</td></tr>
+    <tr><td>Month 6 — Full content architecture + 300 route pages + Chrome extension</td><td>All content silos built + extension launched</td><td>+8,000</td><td>~12,850</td></tr>
+    <tr><td>Month 9 — Compounding from authority growth + international traffic</td><td>Finnish + link compounding</td><td>+8,000</td><td>~20,850</td></tr>
+    <tr><td>Month 12 — 500+ route pages + full DA 25–35 authority</td><td>Scale phase complete</td><td>+10,000</td><td>~30,850</td></tr>
+    <tr class="grn-row"><td>Month 18 — Partnership + international + full compound</td><td>Card issuer deal + full ecosystem</td><td>+15,000+</td><td>40,000–60,000+</td></tr>
+  </tbody></table></div>
+  <p class="note">* Projections are conservative estimates. Route pages and a card issuer partnership have significantly higher upside. Results depend on content quality, link acquisition pace, and algorithm behaviour.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════ PAGE: PERFORMANCE AUDIT ═══════════════════════════════════ -->
+<div id="page-perf" class="pg">
+  <div class="ph">
+    <div class="ph-eye">Technical Audit</div>
+    <h2>Performance Audit</h2>
+    <p>Lighthouse v12.8.2 · Mobile simulation · Throttled 4G · April 11, 2026 · 13 pages audited. Every single FlightPoints page fails Core Web Vitals on mobile. Average performance score: 35/100. Route pages are the most critical failure — Total Blocking Time exceeds 10 seconds on Delta SkyMiles.</p>
+  </div>
+
+  <!-- SUMMARY CARDS -->
+  <div class="cards c4" style="margin-bottom:22px">
+    <div class="mc">
+      <div class="mc-l">Avg Performance Score</div>
+      <div class="mc-v vr">35/100</div>
+      <div class="mc-s">Range: 24–57 · All 13 pages "Poor"</div>
+      <div class="mc-br"><div class="mc-bf" style="width:35%;background:var(--red)"></div></div>
+    </div>
+    <div class="mc">
+      <div class="mc-l">Avg TTFB</div>
+      <div class="mc-v vr">2,042ms</div>
+      <div class="mc-s">Good threshold: &lt;800ms · 2.5× over limit</div>
+      <div class="mc-br"><div class="mc-bf" style="width:80%;background:var(--red)"></div></div>
+    </div>
+    <div class="mc">
+      <div class="mc-l">Avg LCP</div>
+      <div class="mc-v vr">11.4s</div>
+      <div class="mc-s">Good: &lt;2.5s · Worst: 20.9s (getting-started)</div>
+      <div class="mc-br"><div class="mc-bf" style="width:90%;background:var(--red)"></div></div>
+    </div>
+    <div class="mc">
+      <div class="mc-l">Avg TBT</div>
+      <div class="mc-v vr">3,184ms</div>
+      <div class="mc-s">Good: &lt;200ms · Route pages hit 10,550ms</div>
+      <div class="mc-br"><div class="mc-bf" style="width:95%;background:var(--red)"></div></div>
+    </div>
+  </div>
+
+  <div class="al al-r" style="margin-bottom:18px">
+    <div class="al-t">Every page fails Core Web Vitals on mobile</div>
+    <p>No FlightPoints page passes LCP (&lt;2.5s). Average LCP is 11.4s — 4.5× above the "Good" threshold. Route pages (Aeroplan, United, Delta, Virgin, Avianca) have TBT between 1,520ms and 10,550ms, making the page completely unresponsive for up to 10 seconds after load. This is a critical SEO ranking signal failure — Google uses Core Web Vitals as a ranking factor.</p>
+  </div>
+
+  <!-- PAGE-BY-PAGE TABLE -->
+  <div class="sh"><h3>Page-by-Page Lighthouse Scores — FlightPoints.com (Mobile)</h3></div>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;min-width:200px">Page</th>
+          <th>Perf</th>
+          <th>A11y</th>
+          <th>BP</th>
+          <th>SEO</th>
+          <th>TTFB</th>
+          <th>FCP</th>
+          <th>LCP</th>
+          <th>TBT</th>
+          <th>CLS</th>
+          <th>TTI</th>
+          <th>Requests</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Homepage</strong><br><span style="font-size:10px;color:var(--tm)">flightpoints.com/</span></td>
+          <td><span style="font-weight:700;color:var(--red)">38</span></td>
+          <td>96</td><td>75</td><td>92</td>
+          <td style="color:var(--red);font-weight:600">2,900ms</td>
+          <td style="color:var(--red)">5.0s</td>
+          <td style="color:var(--red)">5.0s</td>
+          <td style="color:var(--red)">1,300ms</td>
+          <td style="color:var(--grn)">0.014</td>
+          <td style="color:var(--red)">19.9s</td>
+          <td style="color:var(--red)">196</td>
+          <td style="color:var(--amb)">2.7 MB</td>
+        </tr>
+        <tr>
+          <td><strong>Getting Started</strong><br><span style="font-size:10px;color:var(--tm)">/getting-started</span></td>
+          <td><span style="font-weight:700;color:var(--red)">41</span></td>
+          <td>98</td><td>75</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">2,850ms</td>
+          <td style="color:var(--red)">3.8s</td>
+          <td style="color:var(--red)">20.9s</td>
+          <td style="color:var(--red)">670ms</td>
+          <td style="color:var(--grn)">0.022</td>
+          <td style="color:var(--red)">25.3s</td>
+          <td style="color:var(--red)">129</td>
+          <td style="color:var(--red)">4.5 MB</td>
+        </tr>
+        <tr>
+          <td><strong>Routes Listing</strong><br><span style="font-size:10px;color:var(--tm)">/routes</span></td>
+          <td><span style="font-weight:700;color:var(--red)">24</span></td>
+          <td>96</td><td>79</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">2,240ms</td>
+          <td style="color:var(--red)">3.7s</td>
+          <td style="color:var(--red)">12.0s</td>
+          <td style="color:var(--red)">870ms</td>
+          <td style="color:var(--red)">0.280 ⚠</td>
+          <td style="color:var(--red)">13.4s</td>
+          <td style="color:var(--red)">137</td>
+          <td style="color:var(--amb)">1.5 MB</td>
+        </tr>
+        <tr>
+          <td><strong>Alerts</strong><br><span style="font-size:10px;color:var(--tm)">/alerts</span></td>
+          <td><span style="font-weight:700;color:var(--red)">36</span></td>
+          <td>96</td><td>75</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">2,170ms</td>
+          <td style="color:var(--amb)">2.7s</td>
+          <td style="color:var(--red)">16.2s</td>
+          <td style="color:var(--red)">1,090ms</td>
+          <td style="color:var(--amb)">0.088</td>
+          <td style="color:var(--red)">16.3s</td>
+          <td style="color:var(--red)">124</td>
+          <td style="color:var(--amb)">1.7 MB</td>
+        </tr>
+        <tr>
+          <td><strong>Pricing</strong><br><span style="font-size:10px;color:var(--tm)">/pricing</span></td>
+          <td><span style="font-weight:700;color:var(--red)">35</span></td>
+          <td>96</td><td>79</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">2,320ms</td>
+          <td style="color:var(--amb)">3.2s</td>
+          <td style="color:var(--red)">14.6s</td>
+          <td style="color:var(--red)">1,270ms</td>
+          <td style="color:var(--grn)">0.000</td>
+          <td style="color:var(--red)">15.1s</td>
+          <td style="color:var(--red)">117</td>
+          <td style="color:var(--amb)">1.4 MB</td>
+        </tr>
+        <tr>
+          <td><strong>About</strong><br><span style="font-size:10px;color:var(--tm)">/about</span></td>
+          <td><span style="font-weight:700;color:var(--red)">46</span></td>
+          <td>100</td><td>100</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">1,930ms</td>
+          <td style="color:var(--red)">3.7s</td>
+          <td style="color:var(--red)">5.0s</td>
+          <td style="color:var(--red)">940ms</td>
+          <td style="color:var(--grn)">0.007</td>
+          <td style="color:var(--red)">13.7s</td>
+          <td style="color:var(--red)">95</td>
+          <td style="color:var(--amb)">1.7 MB</td>
+        </tr>
+        <tr>
+          <td><strong>FAQ</strong><br><span style="font-size:10px;color:var(--tm)">/faq</span></td>
+          <td><span style="font-weight:700;color:var(--amb)">57</span></td>
+          <td>100</td><td>79</td><td>85</td>
+          <td style="color:var(--red);font-weight:600">2,080ms</td>
+          <td style="color:var(--amb)">3.0s</td>
+          <td style="color:var(--amb)">3.0s</td>
+          <td style="color:var(--red)">1,130ms</td>
+          <td style="color:var(--grn)">0.000</td>
+          <td style="color:var(--red)">13.7s</td>
+          <td style="color:var(--red)">117</td>
+          <td style="color:var(--amb)">1.4 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: Air Canada Aeroplan</strong><br><span style="font-size:10px;color:var(--tm)">/routes/air-canada-aeroplan</span></td>
+          <td><span style="font-weight:700;color:var(--red)">33</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--red);font-weight:600">3,580ms ⚠</td>
+          <td style="color:var(--amb)">2.3s</td>
+          <td style="color:var(--red)">11.0s</td>
+          <td style="color:var(--red);font-weight:700">6,500ms</td>
+          <td style="color:var(--grn)">0.003</td>
+          <td style="color:var(--red)">17.9s</td>
+          <td style="color:var(--red)">146</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: United MileagePlus</strong><br><span style="font-size:10px;color:var(--tm)">/routes/united-mileageplus</span></td>
+          <td><span style="font-weight:700;color:var(--red)">33</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--grn);font-weight:600">500ms</td>
+          <td style="color:var(--amb)">2.3s</td>
+          <td style="color:var(--red)">12.1s</td>
+          <td style="color:var(--red);font-weight:700">6,460ms</td>
+          <td style="color:var(--grn)">0.005</td>
+          <td style="color:var(--red)">19.3s</td>
+          <td style="color:var(--red)">147</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: Delta SkyMiles</strong><br><span style="font-size:10px;color:var(--tm)">/routes/delta-sky-miles</span></td>
+          <td><span style="font-weight:700;color:var(--red)">29</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--grn);font-weight:600">570ms</td>
+          <td style="color:var(--amb)">3.0s</td>
+          <td style="color:var(--red)">13.7s</td>
+          <td style="color:var(--red);font-weight:700">10,550ms 🔴</td>
+          <td style="color:var(--amb)">0.065</td>
+          <td style="color:var(--red)">23.6s</td>
+          <td style="color:var(--red)">146</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: Singapore KrisFlyer</strong><br><span style="font-size:10px;color:var(--tm)">/routes/singapore-airlines-krisflyer</span></td>
+          <td><span style="font-weight:700;color:var(--red)">38</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--amb);font-weight:600">1,410ms</td>
+          <td style="color:var(--grn)">1.7s</td>
+          <td style="color:var(--red)">11.1s</td>
+          <td style="color:var(--red);font-weight:700">1,520ms</td>
+          <td style="color:var(--grn)">0.003</td>
+          <td style="color:var(--red)">12.8s</td>
+          <td style="color:var(--red)">145</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: Virgin Atlantic</strong><br><span style="font-size:10px;color:var(--tm)">/routes/virgin-atlantic-flying-club</span></td>
+          <td><span style="font-weight:700;color:var(--red)">34</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--red);font-weight:600">2,570ms</td>
+          <td style="color:var(--grn)">1.6s</td>
+          <td style="color:var(--red)">11.8s</td>
+          <td style="color:var(--red);font-weight:700">5,580ms</td>
+          <td style="color:var(--grn)">0.003</td>
+          <td style="color:var(--red)">20.6s</td>
+          <td style="color:var(--red)">147</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+        <tr style="background:var(--rl)">
+          <td><strong>Route: Avianca LifeMiles</strong><br><span style="font-size:10px;color:var(--tm)">/routes/avianca-lifemiles</span></td>
+          <td><span style="font-weight:700;color:var(--red)">27</span></td>
+          <td>100</td><td>79</td><td>83</td>
+          <td style="color:var(--grn);font-weight:600">660ms</td>
+          <td style="color:var(--red)">4.0s</td>
+          <td style="color:var(--red)">12.4s</td>
+          <td style="color:var(--red);font-weight:700">5,440ms</td>
+          <td style="color:var(--grn)">0.004</td>
+          <td style="color:var(--red)">17.3s</td>
+          <td style="color:var(--red)">147</td>
+          <td style="color:var(--amb)">1.6 MB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-bottom:22px">Red rows = route pages. These are the worst offenders. Source: Lighthouse v12.8.2 · Mobile simulation · Throttled 4G · April 11, 2026.</p>
+
+  <!-- TTFB RANKING -->
+  <div class="sh"><h3>TTFB — Server Response Speed by Page (Slowest to Fastest)</h3></div>
+  <div class="al al-a" style="margin-bottom:14px">
+    <div class="al-t">TTFB avg 2,042ms — 2.5× above Google's "Good" threshold of 800ms</div>
+    <p>Most pages have 1,930–3,580ms TTFB. The three exceptions (United, Delta, Avianca route pages) benefit from cached responses with TTFB under 700ms — proving the server is capable of fast responses when data is cached. The fix is edge caching for all routes via Cloudflare or similar CDN.</p>
+  </div>
+  <div class="tw" style="margin-bottom:22px">
+    <table>
+      <thead><tr><th style="text-align:left">Page</th><th>TTFB</th><th>Status</th><th>Fix Priority</th></tr></thead>
+      <tbody>
+        <tr><td>/routes/air-canada-aeroplan</td><td style="color:var(--red);font-weight:700">3,580ms</td><td style="color:var(--red)">Poor</td><td>P1 — edge cache route data</td></tr>
+        <tr><td>/ (Homepage)</td><td style="color:var(--red);font-weight:700">2,900ms</td><td style="color:var(--red)">Poor</td><td>P1 — Cloudflare HTML caching</td></tr>
+        <tr><td>/getting-started</td><td style="color:var(--red);font-weight:700">2,850ms</td><td style="color:var(--red)">Poor</td><td>P1 — static page, should be fast</td></tr>
+        <tr><td>/routes/virgin-atlantic-flying-club</td><td style="color:var(--red);font-weight:700">2,570ms</td><td style="color:var(--red)">Poor</td><td>P1 — edge cache route data</td></tr>
+        <tr><td>/pricing</td><td style="color:var(--red);font-weight:700">2,320ms</td><td style="color:var(--red)">Poor</td><td>P1 — static page, no excuse</td></tr>
+        <tr><td>/routes</td><td style="color:var(--red);font-weight:700">2,240ms</td><td style="color:var(--red)">Poor</td><td>P1 — static listing, should be pre-rendered</td></tr>
+        <tr><td>/alerts</td><td style="color:var(--red);font-weight:700">2,170ms</td><td style="color:var(--red)">Poor</td><td>P1</td></tr>
+        <tr><td>/faq</td><td style="color:var(--red);font-weight:700">2,080ms</td><td style="color:var(--red)">Poor</td><td>P2 — static content</td></tr>
+        <tr><td>/about</td><td style="color:var(--red);font-weight:700">1,930ms</td><td style="color:var(--red)">Poor</td><td>P2 — static content</td></tr>
+        <tr><td>/routes/singapore-airlines-krisflyer</td><td style="color:var(--amb);font-weight:700">1,410ms</td><td style="color:var(--amb)">Needs Improvement</td><td>P2</td></tr>
+        <tr><td>/routes/avianca-lifemiles</td><td style="color:var(--grn);font-weight:700">660ms</td><td style="color:var(--grn)">Good (cached)</td><td>—</td></tr>
+        <tr><td>/routes/delta-sky-miles</td><td style="color:var(--grn);font-weight:700">570ms</td><td style="color:var(--grn)">Good (cached)</td><td>—</td></tr>
+        <tr><td>/routes/united-mileageplus</td><td style="color:var(--grn);font-weight:700">500ms</td><td style="color:var(--grn)">Good (cached)</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TBT — THE KILLER -->
+  <div class="sh"><h3>Total Blocking Time (TBT) — The Critical Failure on Route Pages</h3></div>
+  <div class="al al-r" style="margin-bottom:14px">
+    <div class="al-t">Route pages block the main thread for 5–10 seconds — users cannot interact with the page</div>
+    <p>TBT measures how long the browser's main thread is blocked and unable to respond to user input. Google's "Good" threshold is &lt;200ms. Delta SkyMiles route page has 10,550ms TBT — the page is unresponsive for over 10 seconds. This is caused by rendering thousands of flight data rows synchronously in a single JS task. Fix: virtualise the results list (render only visible rows), paginate to max 50 on load, and use Web Workers for data processing.</p>
+  </div>
+  <div class="tw" style="margin-bottom:22px">
+    <table>
+      <thead><tr><th style="text-align:left">Page</th><th>TBT</th><th>TTI</th><th>Verdict</th><th>Root Cause</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--rl)"><td>/routes/delta-sky-miles</td><td style="color:var(--red);font-weight:700">10,550ms</td><td style="color:var(--red)">23.6s</td><td style="color:var(--red)">Critical</td><td>Full dataset rendering — no virtualisation</td></tr>
+        <tr style="background:var(--rl)"><td>/routes/air-canada-aeroplan</td><td style="color:var(--red);font-weight:700">6,500ms</td><td style="color:var(--red)">17.9s</td><td style="color:var(--red)">Critical</td><td>Full dataset rendering</td></tr>
+        <tr style="background:var(--rl)"><td>/routes/united-mileageplus</td><td style="color:var(--red);font-weight:700">6,460ms</td><td style="color:var(--red)">19.3s</td><td style="color:var(--red)">Critical</td><td>Full dataset rendering</td></tr>
+        <tr style="background:var(--rl)"><td>/routes/virgin-atlantic-flying-club</td><td style="color:var(--red);font-weight:700">5,580ms</td><td style="color:var(--red)">20.6s</td><td style="color:var(--red)">Critical</td><td>Full dataset rendering</td></tr>
+        <tr style="background:var(--rl)"><td>/routes/avianca-lifemiles</td><td style="color:var(--red);font-weight:700">5,440ms</td><td style="color:var(--red)">17.3s</td><td style="color:var(--red)">Critical</td><td>Full dataset rendering</td></tr>
+        <tr><td>/routes/singapore-airlines-krisflyer</td><td style="color:var(--red);font-weight:700">1,520ms</td><td style="color:var(--red)">12.8s</td><td style="color:var(--red)">Poor</td><td>Partial dataset — still too slow</td></tr>
+        <tr><td>/ (Homepage)</td><td style="color:var(--red);font-weight:700">1,300ms</td><td style="color:var(--red)">19.9s</td><td style="color:var(--red)">Poor</td><td>Heavy JS bundle on initial load</td></tr>
+        <tr><td>/pricing</td><td style="color:var(--red);font-weight:700">1,270ms</td><td style="color:var(--red)">15.1s</td><td style="color:var(--red)">Poor</td><td>Shared bundle — unused code</td></tr>
+        <tr><td>/faq</td><td style="color:var(--red);font-weight:700">1,130ms</td><td style="color:var(--red)">13.7s</td><td style="color:var(--red)">Poor</td><td>Shared bundle — unused code</td></tr>
+        <tr><td>/alerts</td><td style="color:var(--red);font-weight:700">1,090ms</td><td style="color:var(--red)">16.3s</td><td style="color:var(--red)">Poor</td><td>Shared bundle — unused code</td></tr>
+        <tr><td>/about</td><td style="color:var(--red);font-weight:700">940ms</td><td style="color:var(--red)">13.7s</td><td style="color:var(--red)">Poor</td><td>Shared bundle — unused code</td></tr>
+        <tr><td>/routes</td><td style="color:var(--red);font-weight:700">870ms</td><td style="color:var(--red)">13.4s</td><td style="color:var(--red)">Poor</td><td>Listing renders all rows at once</td></tr>
+        <tr><td>/getting-started</td><td style="color:var(--red)">670ms</td><td style="color:var(--red)">25.3s</td><td style="color:var(--red)">Poor</td><td>Heavy media content below fold</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CRITICAL ISSUES + FIXES -->
+  <div class="sh"><h3>Critical Issues &amp; Fixes — Prioritised</h3></div>
+  <div class="al al-r">
+    <div class="al-t">P0 — Route pages: virtualise results list (TBT 5,000–10,550ms)</div>
+    <p>All 5 programme route pages render the full flight dataset synchronously, blocking the main thread for 5–10 seconds. Fix: implement virtual scrolling (react-virtual or similar) so only visible rows are rendered. Paginate initial load to 50 results max. Move data processing to a Web Worker. Expected impact: TBT reduced from 10,550ms → &lt;500ms on worst pages.</p>
+  </div>
+  <div class="al al-r">
+    <div class="al-t">P0 — Routes listing: CLS = 0.280 (threshold: &lt;0.1)</div>
+    <p>The /routes page has severe layout shift as airline data loads in. Fix: reserve explicit height for each row before data arrives using CSS skeleton placeholders. Add explicit width/height attributes to all airline logo images. Expected impact: CLS reduced from 0.28 → &lt;0.05.</p>
+  </div>
+  <div class="al al-a">
+    <div class="al-t">P1 — All pages: TTFB avg 2,042ms — add Cloudflare CDN caching</div>
+    <p>Static pages (About, FAQ, Pricing, Getting-Started) have TTFB of 1,930–2,850ms — there is no reason a static HTML page should take 2+ seconds to first byte. Fix: enable Cloudflare HTML caching with cache-control headers. Use ISR (Incremental Static Regeneration) for route pages so HTML is pre-rendered at edge. Three route pages (United, Delta, Avianca) already achieve sub-700ms TTFB when data is cached — prove the server can be fast, just needs caching applied consistently.</p>
+  </div>
+  <div class="al al-a">
+    <div class="al-t">P1 — Getting-started: LCP 20.9s, TTI 25.3s — worst page on the site</div>
+    <p>The /getting-started page has the worst LCP (20.9s) and TTI (25.3s) of any page. File size is 4.5 MB — the largest page by far. Fix: split into sections with lazy loading below the fold. Defer video/heavy media content. Use Next.js dynamic imports for page sections. Expected impact: LCP reduced from 20.9s → &lt;4s.</p>
+  </div>
+  <div class="al al-a">
+    <div class="al-t">P1 — All pages: ~400 KB unused JS on every page</div>
+    <p>Every page loads approximately 1.4–1.7 MB total, most of which is shared JS bundle. Route-based code splitting is not effective — the full app bundle loads on every page. Fix: implement strict route-based code splitting. Tree-shake unused dependencies. Audit npm packages for unused imports. Expected impact: TBT reduced by 300–500ms on non-route pages.</p>
+  </div>
+  <div class="al al-b">
+    <div class="al-t">P2 — Homepage: 196 network requests — reduce to under 80</div>
+    <p>The homepage fires 196 network requests — more than any other page on the site. By comparison, the About page fires only 95 requests and scores 46 (vs 38 for homepage). Fix: bundle CSS/JS aggressively, eliminate redundant API calls on initial load, use HTTP/2 push for critical resources, and defer non-critical third-party scripts.</p>
+  </div>
+  <div class="al al-b">
+    <div class="al-t">P2 — Best Practices consistently 75–79 — check for console errors and deprecated APIs</div>
+    <p>Best Practices score of 75–79 across almost all pages indicates deprecated API usage or console errors. About page scores 100 — use it as the baseline for what "correct" looks like and compare against route pages to identify what's causing the lower score. Fix: run Chrome DevTools → Console on each page and eliminate all errors and warnings.</p>
+  </div>
+
+  <p class="note">Source: Lighthouse v12.8.2 · Mobile simulation · Throttled 4G · Chrome headless · April 11, 2026 · 13 FlightPoints pages audited.</p>
+</div>
+
+</main>
+<script>
+function show(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.getElementById('nav-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
